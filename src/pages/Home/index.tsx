@@ -43,7 +43,12 @@ export function Home() {
             </main>
 
             <aside class="right-extra">
-                right
+                <Router hook={useHashLocation}>
+                    <Route path="/" component={() => <div></div>}></Route>
+                    <Route path="/about" component={() => <div>NOT HOME</div>} />
+                    <Route path="/projects" component={() => <div>NOT HOME</div>} />
+
+                </Router>
             </aside>
         </div>
     );
