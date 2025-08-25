@@ -56,6 +56,13 @@
 .links-main {
     width: 100%;
     display: flex;
+    justify-content: space-between;
+
+}
+
+.links-left {
+    display: flex;
+
 }
 
 .links {
@@ -65,16 +72,39 @@
     gap: 20px;
     transition: filter 200ms ease;
     filter: var(--icon);
+
 }
 
+.links img:hover {
+    cursor: pointer;
+
+}
+
+
 .resume-main {
-    background-color: orange;
+    background-color: var(--accent);
     border: solid;
     border-width: 1px;
-    border-color: green;
+    border-color: var(--accent);
+    color: #FFFFFF;
     padding-block: 10px;
     padding-inline: 20px;
     font-size: 14px;
+    transition: background-color 200ms ease, color 200ms ease;
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+
+.resume-main:hover {
+    background-color: var(--bg);
+    color: var(--accent)
+}
+
+.darktheme-icon {
+    filter: var(--icon);
+    transform: var(--darktheme-icon-rotate);
+    transition: transform 400ms ease;
+    cursor: pointer;
 }
 
 .left-tabs {

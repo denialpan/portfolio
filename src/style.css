@@ -5,8 +5,10 @@
 
     --bg: #e5e7eb;
     --text: #111111;
+    --accent: #7500FF;
     --secondary: #AAAAAA;
     --icon: none;
+    --darktheme-icon-rotate: rotate(0deg);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -19,14 +21,15 @@
         background-color 200ms ease,
         border-color 200ms ease,
         fill 200ms ease,
-        stroke 200ms ease,
+        stroke 200ms ease;
 }
 
 html[data-theme="dark"] {
     --bg: #111111;
     --text: #e5e7eb;
-    --secondary: #AAAAAA;
+    --secondary: #444444;
     --icon: invert(1);
+    --darktheme-icon-rotate: rotate(180deg);
 }
 
 body {

@@ -2,8 +2,13 @@ import darktheme from '../../../assets/icons/dark-theme.svg'
 import facebook from '../../../assets/icons/facebook.svg'
 import github from '../../../assets/icons/github.svg'
 import linkedin from '../../../assets/icons/linkedin.svg'
+import { useTheme } from '../../../hooks/useTheme';
+
 
 export default function ContentHome() {
+
+    const { theme, toggle } = useTheme();
+
     return (
         <>
             <div class="description-content">My passion surrounds all the complexity that the future of computer science has to offer. </div>
@@ -12,19 +17,25 @@ export default function ContentHome() {
 
             <hr class="divider-faded" />
 
-            <div class="links-main description-content">
-                <div class="resume-main">
-                    RESUME
+            <div class="links-main">
+
+                <div class="links-left">
+                    <div class="resume-main">
+                        RESUME
+                    </div>
+                    <div class="links">
+
+                        <img src={github} width={32} height={32} />
+                        <img src={linkedin} width={32} height={32} />
+                        <img src={facebook} width={32} height={32} />
+
+                    </div>
                 </div>
-                <div class="links">
+                <img src={darktheme} width={32} height={32} class="darktheme-icon" onClick={toggle} />
 
-                    <img src={github} width={32} height={32} />
-                    <img src={linkedin} width={32} height={32} />
-                    <img src={facebook} width={32} height={32} />
+            </div>
 
-                </div>
 
-            </div >
 
         </>
     )
