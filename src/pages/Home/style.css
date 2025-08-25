@@ -1,47 +1,98 @@
-img {
-	margin-bottom: 1.5rem;
+.home-entire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100vh;
 }
 
-img:hover {
-	filter: drop-shadow(0 0 2em #673ab8aa);
+.middle-main {
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.home section {
-	margin-top: 5rem;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	column-gap: 1.5rem;
+.name-header {
+    font-family: "Overpass";
+    font-size: 25px;
+    font-weight: normal;
+    white-space: nowrap;
+    user-select: none;
 }
 
-.resource {
-	padding: 0.75rem 1.5rem;
-	border-radius: 0.5rem;
-	text-align: left;
-	text-decoration: none;
-	color: #222;
-	background-color: #f1f1f1;
-	border: 1px solid transparent;
+.pfp-stats {
+    display: flex;
+    justify-content: space-between;
 }
 
-.resource:hover {
-	border: 1px solid #000;
-	box-shadow: 0 25px 50px -12px #673ab888;
+.pfp {
+    border-radius: 50%;
 }
 
-@media (max-width: 639px) {
-	.home section {
-		margin-top: 5rem;
-		grid-template-columns: 1fr;
-		row-gap: 1rem;
-	}
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    font-family: "SourceCodePro", monospace;
+    text-align: right;
 }
 
-@media (prefers-color-scheme: dark) {
-	.resource {
-		color: #ccc;
-		background-color: #161616;
-	}
-	.resource:hover {
-		border: 1px solid #bbb;
-	}
+.description-content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.divider-faded {
+    border-top: 1px solid;
+    border-bottom: none;
+    margin-block: 15px;
+    color: var(--secondary);
+}
+
+.links-main {
+    width: 100%;
+    display: flex;
+}
+
+.links {
+    margin-block: auto;
+    margin-left: 20px;
+    display: flex;
+    gap: 20px;
+    transition: filter 200ms ease;
+    filter: var(--icon);
+}
+
+.resume-main {
+    background-color: orange;
+    border: solid;
+    border-width: 1px;
+    border-color: green;
+    padding-block: 10px;
+    padding-inline: 20px;
+    font-size: 14px;
+}
+
+.left-tabs {
+    padding-top: 90px;
+    height: 500px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left-tabs a {
+    padding-inline: 10px;
+    text-align: right;
+    text-decoration: none;
+}
+
+.right-extra {
+    height: 575px;
+    width: 100px;
 }

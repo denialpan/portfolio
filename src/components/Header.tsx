@@ -1,14 +1,23 @@
 import { useLocation } from 'preact-iso';
+import { useTheme } from '../hooks/useTheme';
+import './header.css';
 
 export function Header() {
     const { url } = useLocation();
+    const { theme, toggle } = useTheme();
 
     return (
-        <header>
+        <header class="main-header">
             <nav>
-                <a href="/" class={url == '/' && 'active'}>
-                    Home
-                </a>
+
+                <button
+                    onClick={toggle}
+
+                >
+                    theme: {theme}
+                </button>
+
+
             </nav>
         </header>
     );

@@ -1,0 +1,14 @@
+/* fade.css */
+.fade {
+    animation: fadeIn 250ms ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
