@@ -1,30 +1,46 @@
 .home-entire {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    /* align-items: center;
+    justify-content: center; */
     height: 100vh;
 }
 
-.middle-main {
-    width: 600px;
-    height: 500px;
+.home-left {
+    margin-block: 20px;
+    padding-inline: 20px;
+    width: 35%;
+    border-right: 1px solid;
+    border-color: var(--secondary);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    align-items: flex-end;
 }
 
-.name-header {
+.icon-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.icon-contact img {
+    filter: var(--icon);
+    transition: transform 400ms ease;
+    cursor: pointer;
+
+}
+
+.personal {
     font-family: "Overpass";
-    font-size: 25px;
+    font-size: 32px;
     font-weight: normal;
     white-space: nowrap;
     user-select: none;
-}
-
-.pfp-stats {
+    color: var(--accent);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    -webkit-font-smoothing: none;
 }
 
 .pfp {
@@ -35,51 +51,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 20px;
-    font-family: "SourceCodePro", monospace;
+    font-size: 32px;
+    font-family: "Montserrat";
     text-align: right;
+    border-bottom: 1px solid;
+    border-color: var(--secondary);
+    padding-bottom: 20px;
 }
 
-.description-content {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    margin-top: 10px;
-}
-
-.divider-faded {
-    border-top: 1px solid;
-    border-bottom: none;
-    margin-block: 15px;
-    color: var(--secondary);
-}
-
-.links-main {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.links-left {
-    display: flex;
-
-}
-
-.links {
-    margin-block: auto;
-    margin-left: 20px;
+.link-section {
     display: flex;
     gap: 20px;
+    flex-direction: column;
     transition: filter 200ms ease;
-    filter: var(--icon);
-
+    align-items: flex-end;
+    font-family: "SourceCodePro";
+    color: var(--accent);
 }
 
-.links img:hover {
-    cursor: pointer;
-
+.link-section a {
+    text-decoration: none;
+    color: var(--accent);
 }
-
 
 .resume-main {
     background-color: var(--accent);
@@ -107,22 +100,9 @@
     cursor: pointer;
 }
 
-.left-tabs {
-    padding-top: 90px;
-    height: 500px;
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.left-tabs a {
-    padding-inline: 10px;
-    text-align: right;
-    text-decoration: none;
-}
-
-.right-extra {
-    height: 575px;
-    width: 100px;
+.home-right {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 50%;
+    background-color: red;
 }

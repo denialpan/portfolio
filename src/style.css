@@ -24,6 +24,11 @@
         stroke 200ms ease;
 }
 
+html {
+    scrollbar-gutter: stable;
+
+}
+
 html[data-theme="dark"] {
     --bg: #111111;
     --text: #e5e7eb;
