@@ -41,7 +41,14 @@ export function Home() {
                         learning to cook more
                     </div>
                 </div>
+                <div class="icon-contact">
 
+                    <img src={github} width={32} height={32} />
+                    <img src={linkedin} width={32} height={32} />
+                    <img src={facebook} width={32} height={32} />
+                    <img src={darktheme} width={32} height={32} class="darktheme-icon" onClick={toggle} />
+
+                </div>
                 <div class="link-section">
                     <a href="#/">Home</a>
                     <a href="#/about">About</a>
@@ -51,15 +58,6 @@ export function Home() {
                 <div class="resume-main">
                     RESUME
                 </div>
-                <div class="icon-contact">
-
-                    <img src={github} width={32} height={32} />
-                    <img src={linkedin} width={32} height={32} />
-                    <img src={facebook} width={32} height={32} />
-                    <img src={darktheme} width={32} height={32} class="darktheme-icon" onClick={toggle} />
-
-                </div>
-
 
 
             </div>
