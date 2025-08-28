@@ -29,7 +29,7 @@ export function Home() {
                     <img src={pfp} alt="this is me" width={200} height={200} class="pfp" />
 
                 </div>
-                <div class="stats">
+                <div class="stats custom-divider-bottom">
                     <div>
                         22 year old graduating from GT
 
@@ -61,7 +61,7 @@ export function Home() {
 
 
             </div>
-            <div class="home-right">
+            <div class="home-right custom-divider-left">
                 <Router hook={useHashLocation}>
                     <Route path="/" component={() => <FadeRoute component={ContentHome} />} />
                     <Route path="/about" component={() => <FadeRoute component={ContentAbout} />} />

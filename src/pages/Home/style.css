@@ -7,10 +7,8 @@
 
 .home-left {
     margin-block: 20px;
-    padding-inline: 20px;
+    padding-left: 20px;
     width: 35%;
-    border-right: 1px solid;
-    border-color: var(--secondary);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -53,9 +51,7 @@
     font-size: 32px;
     font-family: "Montserrat";
     text-align: right;
-    border-bottom: 1px solid;
-    border-color: var(--secondary);
-    padding-bottom: 20px;
+
 }
 
 .link-section {
@@ -64,7 +60,7 @@
     flex-direction: column;
     transition: filter 200ms ease;
     align-items: flex-end;
-    font-family: "SourceCodePro";
+    font-family: "Consolas";
     color: var(--accent);
 }
 
@@ -103,5 +99,47 @@
     margin-left: 20px;
     margin-top: 20px;
     width: 50%;
-    background-color: red;
+    overflow: auto;
+}
+
+.latest {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.description-all {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.description-text {
+    font-family: "Consolas";
+    font-size: 20px;
+}
+
+.custom-header {
+    color: var(--accent);
+    font-family: "Montserrat";
+    font-size: 24px;
+}
+
+.custom-caption {
+    color: var(--text);
+    font-family: "Consolas";
+}
+
+.custom-divider-bottom {
+    border-bottom: 1px solid;
+    border-color: var(--secondary);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.custom-divider-left {
+    border-left: 1px solid;
+    border-color: var(--secondary);
+    padding-left: 20px;
 }
