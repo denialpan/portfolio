@@ -63,9 +63,3 @@ header a {
     padding: 5px;
     text-decoration: none;
 }
-
-@media (max-width: 639px) {
-    main {
-        margin: 2rem;
-    }
-}

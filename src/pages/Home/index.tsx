@@ -4,21 +4,22 @@ import './style.css';
 import pfp from '../../assets/images/me.jpg'
 import ContentHome from "./content/contentHome";
 import { FadeRoute } from "../../animations/FadeRoute";
-import RightSidebar from "./rightSideBar";
 import ContentAbout from "./content/contentAbout";
 import { useTheme } from "../../hooks/useTheme";
 import darktheme from '../../assets/icons/dark-theme.svg';
 import github from '../../assets/icons/github.svg';
 import facebook from '../../assets/icons/facebook.svg';
 import linkedin from '../../assets/icons/linkedin.svg';
+import menu from '../../assets/icons/menu.svg';
+import { useState } from "preact/hooks";
 
 
-function MiddleAbout() { return <div>About</div>; }
 function MiddleProjects() { return <div>Projects</div>; }
 
 export function Home() {
 
     const { theme, toggle } = useTheme();
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <div class="home-entire">
@@ -41,31 +42,68 @@ export function Home() {
                         learning to cook more
                     </div>
                 </div>
-                <div class="icon-contact">
 
-                    <img src={github} width={32} height={32} />
-                    <img src={linkedin} width={32} height={32} />
-                    <img src={facebook} width={32} height={32} />
-                    <img src={darktheme} width={32} height={32} class="darktheme-icon" onClick={toggle} />
+                <div class="desktop-nav">
+                    <div class="icon-contact">
+
+                        <img src={github} width={32} height={32} />
+                        <img src={linkedin} width={32} height={32} />
+                        <img src={facebook} width={32} height={32} />
+                        <img src={darktheme} width={32} height={32} class="darktheme-icon" onClick={toggle} />
+                        <img src={menu} width={32} height={32} class="menu-icon" />
+
+                    </div>
+                    <div class="link-section">
+                        <a href="#/">Home</a>
+                        <a href="#/about">About</a>
+                        <a href="#/projects">Projects</a>
+
+                    </div>
+                    <div class="resume-main">
+                        RESUME
+                    </div>
+                </div>
+
+                <div class="mobile-nav custom-divider-bottom">
+
+
+                    <div class="icon-contact">
+
+                        <img src={github} width={32} height={32} />
+                        <img src={linkedin} width={32} height={32} />
+                        <img src={facebook} width={32} height={32} />
+                        <img src={darktheme} width={32} height={32} class="darktheme-icon" onClick={toggle} />
+                        <img src={menu} width={32} height={32} class="menu-icon" onClick={() => setMenuOpen(!menuOpen)} />
+
+                    </div>
+                    {menuOpen && (
+
+                        <div class="link-section ">
+                            <a href="#/">Home</a>
+                            <a href="#/about">About</a>
+                            <a href="#/projects">Projects</a>
+                            <a href="#/projects">Resume</a>
+                        </div>
+
+
+                    )}
 
                 </div>
-                <div class="link-section">
-                    <a href="#/">Home</a>
-                    <a href="#/about">About</a>
-                    <a href="#/projects">Projects</a>
 
-                </div>
-                <div class="resume-main">
-                    RESUME
-                </div>
 
 
             </div>
             <div class="home-right custom-divider-left">
                 <Router hook={useHashLocation}>
-                    <Route path="/" component={() => <FadeRoute component={ContentHome} />} />
-                    <Route path="/about" component={() => <FadeRoute component={ContentAbout} />} />
-                    <Route path="/projects" component={() => <FadeRoute component={MiddleProjects} />} />
+                    <Route path="/">
+                        <FadeRoute component={ContentHome} />
+                    </Route>
+                    <Route path="/about">
+                        <FadeRoute component={ContentAbout} />
+                    </Route>
+                    <Route path="/projects">
+                        <FadeRoute component={MiddleProjects} />
+                    </Route>
                 </Router>
             </div>
 
