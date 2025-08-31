@@ -14,7 +14,7 @@ export function App() {
 
                 <Router>
                     <Switch>
-                        <Route path="/" component={Home} />
+                        <Route path="/portfolio/" component={Home} />
                         <Route path="ideas" component={Ideas} />
                         <Route path="*" component={NotFound} />
                     </Switch>

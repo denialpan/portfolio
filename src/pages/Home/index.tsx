@@ -9,9 +9,7 @@ import darktheme from '../../assets/icons/dark-theme.svg';
 import github from '../../assets/icons/github.svg';
 import facebook from '../../assets/icons/facebook.svg';
 import linkedin from '../../assets/icons/linkedin.svg';
-import contentProjects from "./content/contentProjects";
 import { NameChange } from '../../animations/nameChange';
-import contentRandom from "./content/contentRandom";
 import ContentProjects from "./content/contentProjects";
 import ContentRandom from "./content/contentRandom";
 
@@ -98,9 +96,7 @@ export function Home() {
                         <Route path="/random">
                             <ContentRandom />
                         </Route>
-                        <Route path="*">
-                            <ContentHome />
-                        </Route>
+                        <Route><ContentHome /></Route>
                     </Switch>
                 </Router>
             </div>

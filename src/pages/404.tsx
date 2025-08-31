@@ -20,7 +20,7 @@ export function NotFound() {
             <h3 style={{ fontFamily: "Consolas", textAlign: "center" }}>
                 csgo better than cs2
             </h3>
-            <h3 style={{ fontFamily: "Consolas", textAlign: "center", cursor: "pointer" }} onClick={() => window.location.href = "/portfolio"} >
+            <h3 style={{ fontFamily: "Consolas", textAlign: "center", cursor: "pointer" }} onClick={() => window.location.href = "/portfolio/"} >
                 back to home
             </h3>
 

@@ -17,7 +17,6 @@ export default function ContentHome() {
                     playsinline
                     width="500"
                     preload="metadata"
-                    poster="/thumb.jpg"
                     class='latest-video'
                 >
                     <source src={minedemo} type="video/webm" />
@@ -29,8 +28,7 @@ export default function ContentHome() {
                 <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/s4-shadowplay", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
                     Largest Project - s4-shadowplay
                 </div>
-                <img src={s4shadowplay} width={720}>
-                </img>
+                <img src={s4shadowplay} width={720} />
                 <div class="custom-caption custom-divider-bottom">
                     a personal Google Drive alternative file storage supporting multiple users
                 </div>

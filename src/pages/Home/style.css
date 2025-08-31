@@ -21,7 +21,7 @@
 
 .icon-contact img {
     filter: var(--icon);
-    transition: transform 400ms ease, filter var(--transition-time) ease;
+    transition: transform 650ms ease, filter var(--transition-time) ease;
     cursor: pointer;
 }
 
