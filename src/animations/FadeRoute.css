@@ -1,6 +1,6 @@
 /* fade.css */
 .fade {
-    animation: fadeIn 500ms ease forwards;
+    animation: fadeIn 1000ms ease forwards;
 }
 
 @keyframes fadeIn {

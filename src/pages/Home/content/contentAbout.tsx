@@ -40,13 +40,7 @@ export default function ContentAbout() {
                     A showcase or project should be efficient as it is accessible to look at and use. I strive to create things that follow a consistent theme depending on its purpose, whether it be a Windows-specific program adhering to WPF/Winforms tradition, or as simple as this portfolio page, giving users the choice to view on desktop or mobile with accessibility in theming for the eyes.
                 </div>
 
-
-
-
             </div>
-
-
-
         </>
     )
 }

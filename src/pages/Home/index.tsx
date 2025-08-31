@@ -12,24 +12,21 @@ import facebook from '../../assets/icons/facebook.svg';
 import linkedin from '../../assets/icons/linkedin.svg';
 import menu from '../../assets/icons/menu.svg';
 import { useState } from "preact/hooks";
-
-
-function MiddleProjects() { return <div>Projects</div>; }
+import contentProjects from "./content/contentProjects";
+import { NameChange } from '../../animations/nameChange';
 
 export function Home() {
 
     const { theme, toggle } = useTheme();
-    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <div class="home-entire">
 
             <div class="home-left">
-                <div class="personal">
-                    Daniel Pan
-                    <img src={pfp} alt="this is me" width={200} height={200} class="pfp" />
 
-                </div>
+                <NameChange defaultText="Daniel Pan" />
+                <img src={pfp} alt="this is me" width={200} height={200} class="pfp" />
+
                 <div class="stats custom-divider-bottom">
                     <div>
                         22 year old graduating from GT
@@ -57,7 +54,7 @@ export function Home() {
                         <a href="#/">Home</a>
                         <a href="#/about">About</a>
                         <a href="#/projects">Projects</a>
-
+                        <a href="#/random">Random</a>
                     </div>
                     <div class="resume-main">
                         RESUME
@@ -73,21 +70,15 @@ export function Home() {
                         <img src={linkedin} width={32} height={32} />
                         <img src={facebook} width={32} height={32} />
                         <img src={darktheme} width={32} height={32} class="darktheme-icon" onClick={toggle} />
-                        <img src={menu} width={32} height={32} class="menu-icon" onClick={() => setMenuOpen(!menuOpen)} />
 
                     </div>
-                    {menuOpen && (
-
-                        <div class="link-section ">
-                            <a href="#/">Home</a>
-                            <a href="#/about">About</a>
-                            <a href="#/projects">Projects</a>
-                            <a href="#/projects">Resume</a>
-                        </div>
-
-
-                    )}
-
+                    <div class="link-section ">
+                        <a href="#/">Home</a>
+                        <a href="#/about">About</a>
+                        <a href="#/projects">Projects</a>
+                        <a href="#/random">Random</a>
+                        <a href="#/projects">Resume</a>
+                    </div>
                 </div>
 
 
@@ -102,7 +93,7 @@ export function Home() {
                         <FadeRoute component={ContentAbout} />
                     </Route>
                     <Route path="/projects">
-                        <FadeRoute component={MiddleProjects} />
+                        <FadeRoute component={contentProjects} />
                     </Route>
                 </Router>
             </div>

@@ -33,11 +33,11 @@
     font-family: "Overpass";
     font-size: 32px;
     font-weight: normal;
-    white-space: nowrap;
     user-select: none;
     color: var(--accent);
     display: flex;
-    flex-direction: column;
+    word-wrap: break-word;
+    text-align: end;
 }
 
 .pfp {
@@ -173,7 +173,7 @@
     .mobile-nav {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 10px;
         width: 100%;
     }
@@ -217,13 +217,14 @@
     .link-section {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     .icon-contact {
         display: flex;
         flex-direction: row-reverse;
-
     }
 
     .menu-icon {
@@ -243,5 +244,9 @@
     .stats {
         width: 100%;
         font-size: 20px;
+    }
+
+    .personal {
+        text-align: start;
     }
 }

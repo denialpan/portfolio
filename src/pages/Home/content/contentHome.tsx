@@ -4,11 +4,11 @@ import s4shadowplay from '../../../assets/images/s4-shadowplay.png'
 export default function ContentHome() {
 
     return (
+
         <>
             <div class="latest">
                 <div class="custom-header">
                     Latest Project - dansweeper
-
                 </div>
                 <video
                     autoplay
@@ -35,11 +35,7 @@ export default function ContentHome() {
                     a personal Google Drive alternative file storage supporting multiple users
                 </div>
             </div>
-
-
         </>
-
-
 
     )
 }

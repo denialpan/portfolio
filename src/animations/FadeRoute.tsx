@@ -1,5 +1,5 @@
 import { h, ComponentType } from "preact";
-import './FadeRoute.css'
+import './fadeRoute.css'
 
 export function FadeRoute({ component: C }: { component: ComponentType }) {
     return (
