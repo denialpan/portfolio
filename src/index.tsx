@@ -1,5 +1,5 @@
 import { LocationProvider, hydrate, prerender as ssr } from 'preact-iso';
-import { Router, Route } from "wouter-preact";
+import { Router, Route, Switch } from "wouter-preact";
 import { Home } from './pages/Home/index.jsx';
 import { NotFound } from './pages/_404.jsx';
 import { Ideas } from './pages/Ideas/index.js';
@@ -13,9 +13,11 @@ export function App() {
             <main>
 
                 <Router>
-                    <Route path="/" component={Home} />
-                    <Route path="ideas" component={Ideas} />
-                    {/* <Route default component={NotFound} /> */}
+                    <Switch>
+                        <Route path="/" component={Home} />
+                        <Route path="ideas" component={Ideas} />
+                        <Route path="*" component={NotFound} />
+                    </Switch>
                 </Router>
             </main>
 

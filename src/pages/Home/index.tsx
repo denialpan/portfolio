@@ -10,10 +10,9 @@ import darktheme from '../../assets/icons/dark-theme.svg';
 import github from '../../assets/icons/github.svg';
 import facebook from '../../assets/icons/facebook.svg';
 import linkedin from '../../assets/icons/linkedin.svg';
-import menu from '../../assets/icons/menu.svg';
-import { useState } from "preact/hooks";
 import contentProjects from "./content/contentProjects";
 import { NameChange } from '../../animations/nameChange';
+import contentRandom from "./content/contentRandom";
 
 export function Home() {
 
@@ -43,11 +42,10 @@ export function Home() {
                 <div class="desktop-nav">
                     <div class="icon-contact">
 
-                        <img src={github} width={32} height={32} />
-                        <img src={linkedin} width={32} height={32} />
-                        <img src={facebook} width={32} height={32} />
+                        <img src={github} width={32} height={32} onClick={() => window.open("https://github.com/denialpan/", "_blank", "noopener,noreferrer")} />
+                        <img src={linkedin} width={32} height={32} onClick={() => window.open("https://www.linkedin.com/in/danielpan-/", "_blank", "noopener,noreferrer")} />
+                        <img src={facebook} width={32} height={32} onClick={() => window.open("https://www.facebook.com/danpan123/", "_blank", "noopener,noreferrer")} />
                         <img src={darktheme} width={32} height={32} class="darktheme-icon" onClick={toggle} />
-                        <img src={menu} width={32} height={32} class="menu-icon" />
 
                     </div>
                     <div class="link-section">
@@ -86,59 +84,25 @@ export function Home() {
             </div>
             <div class="home-right custom-divider-left">
                 <Router hook={useHashLocation}>
-                    <Route path="/">
-                        <FadeRoute component={ContentHome} />
-                    </Route>
-                    <Route path="/about">
-                        <FadeRoute component={ContentAbout} />
-                    </Route>
-                    <Route path="/projects">
-                        <FadeRoute component={contentProjects} />
-                    </Route>
+                    <Switch>
+                        <Route path="/">
+                            <FadeRoute component={ContentHome} />
+                        </Route>
+                        <Route path="/about">
+                            <FadeRoute component={ContentAbout} />
+                        </Route>
+                        <Route path="/projects">
+                            <FadeRoute component={contentProjects} />
+                        </Route>
+                        <Route path="/random">
+                            <FadeRoute component={contentRandom} />
+                        </Route>
+                        <Route path="*">
+                            <FadeRoute component={ContentHome} />
+                        </Route>
+                    </Switch>
                 </Router>
             </div>
-
-            {/* <main class="middle-main">
-
-                <div class="sticky-important-info">
-                    <div class="name-header">
-                        Hello, I'm Daniel Pan!
-                    </div>
-                    <div class="pfp-stats">
-                        <img src={pfp} alt="this is me" width={100} height={100} class="pfp" />
-                        <div class="stats">
-                            <div>
-                                <b>22 year old graduating from GT</b>
-                            </div>
-                            <div>
-                                React, C++, Python, Java
-                            </div>
-                            <div>
-                                learning to cook more
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="links-sticky">
-                        
-                    </div>
-                </div>
-
-                
-            </main>
-
-            <aside class="right-extra">
-                <div class="right-offset">
-                    <Router hook={useHashLocation}>
-                        <Switch>
-                            <Route path="/" component={() => <div></div>} />
-                            <Route path="*" component={() => <FadeRoute component={RightSidebar} />} />
-                        </Switch>
-                    </Router>
-                </div>
-
-
-            </aside> */}
         </div >
     );
 }

@@ -1,8 +1,5 @@
 .home-entire {
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
-    /* height: 100vh; */
 }
 
 .home-left {
@@ -47,11 +44,9 @@
 .stats {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     font-size: 32px;
     font-family: "Montserrat";
     text-align: right;
-
 }
 
 .link-section {
@@ -145,10 +140,6 @@
     padding-left: 20px;
 }
 
-.menu-icon {
-    display: none;
-}
-
 .desktop-nav {
     display: flex;
     flex-direction: column;
@@ -227,21 +218,16 @@
         flex-direction: row-reverse;
     }
 
-    .menu-icon {
-        display: block;
-    }
-
     .stats {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         font-size: 32px;
         font-family: "Montserrat";
         text-align: left;
-
     }
 
     .stats {
+        padding-top: 10px;
         width: 100%;
         font-size: 20px;
     }
