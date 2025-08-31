@@ -1,5 +1,4 @@
 import clipahh from '../assets/video/404.mp4'
-import { useTheme } from '../hooks/useTheme';
 
 export function NotFound() {
 
@@ -21,7 +20,7 @@ export function NotFound() {
             <h3 style={{ fontFamily: "Consolas", textAlign: "center" }}>
                 csgo better than cs2
             </h3>
-            <h3 style={{ fontFamily: "Consolas", textAlign: "center", cursor: "pointer" }} onClick={() => window.location.href = "/"} >
+            <h3 style={{ fontFamily: "Consolas", textAlign: "center", cursor: "pointer" }} onClick={() => window.location.href = "/portfolio"} >
                 back to home
             </h3>
 
