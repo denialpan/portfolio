@@ -3,7 +3,6 @@ import { useHashLocation } from "wouter-preact/use-hash-location";
 import './style.css';
 import pfp from '../../assets/images/me.jpg'
 import ContentHome from "./content/contentHome";
-import { FadeRoute } from "../../animations/FadeRoute";
 import ContentAbout from "./content/contentAbout";
 import { useTheme } from "../../hooks/useTheme";
 import darktheme from '../../assets/icons/dark-theme.svg';
@@ -13,6 +12,8 @@ import linkedin from '../../assets/icons/linkedin.svg';
 import contentProjects from "./content/contentProjects";
 import { NameChange } from '../../animations/nameChange';
 import contentRandom from "./content/contentRandom";
+import ContentProjects from "./content/contentProjects";
+import ContentRandom from "./content/contentRandom";
 
 export function Home() {
 
@@ -86,19 +87,19 @@ export function Home() {
                 <Router hook={useHashLocation}>
                     <Switch>
                         <Route path="/">
-                            <FadeRoute component={ContentHome} />
+                            <ContentHome />
                         </Route>
                         <Route path="/about">
-                            <FadeRoute component={ContentAbout} />
+                            <ContentAbout />
                         </Route>
                         <Route path="/projects">
-                            <FadeRoute component={contentProjects} />
+                            <ContentProjects />
                         </Route>
                         <Route path="/random">
-                            <FadeRoute component={contentRandom} />
+                            <ContentRandom />
                         </Route>
                         <Route path="*">
-                            <FadeRoute component={ContentHome} />
+                            <ContentHome />
                         </Route>
                     </Switch>
                 </Router>

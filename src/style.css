@@ -9,6 +9,7 @@
     --secondary: #AAAAAA;
     --icon: none;
     --darktheme-icon-rotate: rotate(0deg);
+    --transition-time: 500ms;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -17,11 +18,11 @@
     -webkit-text-size-adjust: 100%;
 
     --transition:
-        color 200ms ease,
-        background-color 200ms ease,
-        border-color 200ms ease,
-        fill 200ms ease,
-        stroke 200ms ease;
+        color var(--transition-time) ease,
+        background-color var(--transition-time) ease,
+        border-color var(--transition-time) ease,
+        fill var(--transition-time) ease,
+        stroke var(--transition-time) ease;
 }
 
 html {
@@ -41,7 +42,7 @@ body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    transition: color 200ms ease, background-color 200ms ease;
+    transition: color var(--transition-time) ease, background-color var(--transition-time) ease;
 }
 
 #app {

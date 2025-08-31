@@ -21,9 +21,8 @@
 
 .icon-contact img {
     filter: var(--icon);
-    transition: transform 400ms ease;
+    transition: transform 400ms ease, filter var(--transition-time) ease;
     cursor: pointer;
-
 }
 
 .personal {
@@ -53,7 +52,7 @@
     display: flex;
     gap: 20px;
     flex-direction: column;
-    transition: filter 200ms ease;
+    transition: filter var(--transition-time) ease;
     align-items: flex-end;
     font-family: "Consolas";
     color: var(--accent);
@@ -73,7 +72,7 @@
     padding-block: 10px;
     padding-inline: 20px;
     font-size: 14px;
-    transition: background-color 200ms ease, color 200ms ease;
+    transition: background-color var(--transition-time) ease, color var(--transition-time) ease;
     cursor: pointer;
     font-family: "Montserrat";
     text-align: center;
@@ -125,6 +124,7 @@
 .custom-caption {
     color: var(--text);
     font-family: "Consolas";
+    transition: color var(--transition-time) ease;
 }
 
 .custom-divider-bottom {

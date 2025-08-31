@@ -21,6 +21,8 @@ export function App() {
                 </Router>
             </main>
 
+            <div style={{ textAlign: "center", color: "var(--secondary)", marginBlock: "50px" }}> Built with Preact. I like it better than base React</div>
+
         </LocationProvider>
     );
 }

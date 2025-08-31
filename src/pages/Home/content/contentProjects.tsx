@@ -9,7 +9,7 @@ import db2 from '../../../assets/images/db2.png'
 
 
 
-export default function contentProjects() {
+export default function ContentProjects() {
 
     return (
 
