@@ -19,7 +19,7 @@ export function NotFound() {
                 <source src={clipahh} type="video/webm" />
             </video>
             <h3 style={{ fontFamily: "Consolas", textAlign: "center" }}>
-                csgo > cs2
+                csgo better than cs2
             </h3>
             <h3 style={{ fontFamily: "Consolas", textAlign: "center", cursor: "pointer" }} onClick={() => window.location.href = "/"} >
                 back to home
