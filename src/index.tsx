@@ -14,9 +14,10 @@ export function App() {
                 <Router>
                     <Switch>
                         <Route path="/portfolio/" component={Home} />
-                        <Route path="/portfolio/404/" component={NotFound} />
+                        <Route default component={NotFound} />
                     </Switch>
                 </Router>
+
             </main>
 
             <div style={{ textAlign: "center", color: "var(--secondary)", marginBlock: "50px" }}> Built with Preact. I like it better than base React</div>

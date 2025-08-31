@@ -41,10 +41,10 @@ export function Home() {
                 <div class="desktop-nav">
                     <div class="icon-contact">
 
-                        <img src={github} width={32} height={32} onClick={() => window.open("https://github.com/denialpan/", "_blank", "noopener,noreferrer")} />
-                        <img src={linkedin} width={32} height={32} onClick={() => window.open("https://www.linkedin.com/in/danielpan-/", "_blank", "noopener,noreferrer")} />
-                        <img src={facebook} width={32} height={32} onClick={() => window.open("https://www.facebook.com/danpan123/", "_blank", "noopener,noreferrer")} />
-                        <img src={darktheme} width={32} height={32} class="darktheme-icon" onClick={toggle} />
+                        <img src={github} alt="github" width={32} height={32} onClick={() => window.open("https://github.com/denialpan/", "_blank", "noopener,noreferrer")} />
+                        <img src={linkedin} alt="linkedin" width={32} height={32} onClick={() => window.open("https://www.linkedin.com/in/danielpan-/", "_blank", "noopener,noreferrer")} />
+                        <img src={facebook} alt="facebook" width={32} height={32} onClick={() => window.open("https://www.facebook.com/danpan123/", "_blank", "noopener,noreferrer")} />
+                        <img src={darktheme} alt="toggle theme" width={32} height={32} class="darktheme-icon" onClick={toggle} />
 
                     </div>
                     <div class="link-section">
@@ -63,10 +63,10 @@ export function Home() {
 
                     <div class="icon-contact">
 
-                        <img src={github} width={32} height={32} />
-                        <img src={linkedin} width={32} height={32} />
-                        <img src={facebook} width={32} height={32} />
-                        <img src={darktheme} width={32} height={32} class="darktheme-icon" onClick={toggle} />
+                        <img src={github} alt="github" width={32} height={32} />
+                        <img src={linkedin} alt="linkedin" width={32} height={32} />
+                        <img src={facebook} alt="facebook" width={32} height={32} />
+                        <img src={darktheme} alt="toggle theme" width={32} height={32} class="darktheme-icon" onClick={toggle} />
 
                     </div>
                     <div class="link-section ">
@@ -74,10 +74,9 @@ export function Home() {
                         <a href="#/about">About</a>
                         <a href="#/projects">Projects</a>
                         <a href="#/random">Random</a>
-                        <a href="#/projects">Resume</a>
+                        <a href="https://raw.githubusercontent.com/denialpan/portfolio/552d4cc79944dab6eb1e4bc473422aef20beecfe/src/assets/Daniel%20Pan%20-%20Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
                     </div>
                 </div>
-
 
 
             </div>

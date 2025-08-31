@@ -26,7 +26,7 @@
 }
 
 .personal {
-    font-family: "Overpass";
+    font-family: "JetBrainsMono";
     font-size: 32px;
     font-weight: normal;
     user-select: none;
@@ -50,11 +50,11 @@
 
 .link-section {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-direction: column;
     transition: filter var(--transition-time) ease;
     align-items: flex-end;
-    font-family: "Consolas";
+    font-family: "JetBrainsMono";
     color: var(--accent);
 }
 
@@ -111,7 +111,7 @@
 }
 
 .description-text {
-    font-family: "Consolas";
+    font-family: "JetBrainsMono";
     font-size: 20px;
 }
 
@@ -123,7 +123,7 @@
 
 .custom-caption {
     color: var(--text);
-    font-family: "Consolas";
+    font-family: "JetBrainsMono";
     transition: color var(--transition-time) ease;
 }
 
@@ -131,7 +131,7 @@
     border-bottom: 1px solid;
     border-color: var(--secondary);
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .custom-divider-left {

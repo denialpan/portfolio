@@ -27,7 +27,7 @@ export default function ContentProjects() {
                 dankeyboard
             </div>
 
-            <img src={dankeyboard} width={720} />
+            <img src={dankeyboard} alt="dankeyboard" width={720} />
 
             <div class="custom-caption custom-divider-bottom">
                 keyboard and mouse tracking with a custom heatmap graph of keyboard, mouse, and monitor
@@ -76,8 +76,8 @@ export default function ContentProjects() {
             <div style={{
                 display: "flex", gap: "10px", overflowX: "auto"
             }}>
-                <img src={db1} height={400} />
-                <img src={db2} height={400} />
+                <img src={db1} height={400} alt="iphone1" />
+                <img src={db2} height={400} alt="iphone2" />
                 <video
                     autoplay
                     loop
@@ -111,7 +111,7 @@ export default function ContentProjects() {
                 s4-shadowplay
             </div>
 
-            <img src={s4shadowplay} width={800} />
+            <img src={s4shadowplay} alt="s4-shadowplay" width={800} />
 
             <div class="custom-caption custom-divider-bottom">
                 a personal Google Drive alternative file storage supporting multiple users
@@ -138,8 +138,8 @@ export default function ContentProjects() {
             <div style={{
                 display: "flex", gap: "10px", overflowX: "auto"
             }}>
-                <img src={danverter} width={420} />
-                <img src={danverter1} width={420} />
+                <img src={danverter} width={420} alt="danverter1" />
+                <img src={danverter1} width={420} alt="danverter2" />
 
             </div>
 
