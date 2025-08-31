@@ -2,7 +2,6 @@ import { LocationProvider, hydrate, prerender as ssr } from 'preact-iso';
 import { Router, Route, Switch } from "wouter-preact";
 import { Home } from './pages/Home/index.jsx';
 import { NotFound } from './pages/404.js';
-import { Ideas } from './pages/Ideas/index.js';
 import './style.css';
 import './font.css';
 
@@ -15,7 +14,7 @@ export function App() {
                 <Router>
                     <Switch>
                         <Route path="/portfolio/" component={Home} />
-                        <Route path="/portfolio/404" component={NotFound} />
+                        <Route path="/portfolio/404/" component={NotFound} />
                     </Switch>
                 </Router>
             </main>
