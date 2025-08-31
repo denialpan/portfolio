@@ -171,9 +171,6 @@ export default function ContentProjects() {
                     <li>
                         <a href="https://denialpan.github.io/portfolio-old-1/" target="_blank" rel="noreferrer"> first old portfolio from maybe 2021 - 2022 i think</a>
                     </li>
-                    <li>
-                        <a href="https://denialpan.github.io/portfolio-old-1/" target="_blank" rel="noreferrer"> second most recent portfolio from 2022 - 8/30/2025</a>
-                    </li>
                 </ul>
 
             </div>

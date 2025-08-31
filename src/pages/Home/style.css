@@ -43,7 +43,7 @@
 .stats {
     display: flex;
     flex-direction: column;
-    font-size: 32px;
+    font-size: 28px;
     font-family: "Montserrat";
     text-align: right;
 }

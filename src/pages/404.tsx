@@ -20,6 +20,11 @@ export function NotFound() {
             <h3 style={{ fontFamily: "Consolas", textAlign: "center" }}>
                 csgo better than cs2
             </h3>
+
+            <p style={{ fontFamily: "Consolas", textAlign: "center" }}>
+                originally didnt know gh pages implemented their own 404
+            </p>
+
             <h3 style={{ fontFamily: "Consolas", textAlign: "center", cursor: "pointer" }} onClick={() => window.location.href = "/portfolio/"} >
                 back to home
             </h3>
