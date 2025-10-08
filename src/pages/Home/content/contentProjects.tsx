@@ -1,4 +1,4 @@
-import minedemo from '../../../assets/video/7.mp4';
+import minedemo from '../../../assets/video/minedemov2.mp4';
 import dankeyboard from '../../../assets/images/dankeyboard.png';
 import danverter from '../../../assets/images/danverter.png';
 import danverter1 from '../../../assets/images/danverter1.png';
@@ -41,7 +41,7 @@ export default function ContentProjects() {
                 </ul>
             </div>
 
-            <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dansweeper", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
+            <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dansweeper-ml", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
                 dansweeper
             </div>
             <video
@@ -49,7 +49,7 @@ export default function ContentProjects() {
                 loop
                 muted
                 playsinline
-                width="500"
+                width="720"
                 preload="metadata"
                 poster="/thumb.jpg"
                 class='latest-video'

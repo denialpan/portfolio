@@ -1,4 +1,4 @@
-import minedemo from '../../../assets/video/7.mp4';
+import minedemo from '../../../assets/video/minedemov2.mp4';
 import s4shadowplay from '../../../assets/images/s4-shadowplay.png'
 
 export default function ContentHome() {
@@ -7,7 +7,7 @@ export default function ContentHome() {
 
         <>
             <div class="latest">
-                <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dansweeper", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
+                <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dansweeper-ml", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
                     Latest Project - dansweeper
                 </div>
                 <video
@@ -15,7 +15,7 @@ export default function ContentHome() {
                     loop
                     muted
                     playsinline
-                    width="500"
+                    width="720"
                     preload="metadata"
                     class='latest-video'
                 >
