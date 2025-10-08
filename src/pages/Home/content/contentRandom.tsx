@@ -1,9 +1,8 @@
-import { useMemo, useEffect } from 'preact/hooks';
-import { Link, useRoute, useLocation } from 'wouter-preact';
+import { useEffect } from 'preact/hooks';
+import { useRoute, useLocation } from 'wouter-preact';
 import { parse as parseYAML } from 'yaml';
 import { marked } from 'marked';
 import { setMeta } from '../../../utils/setmeta';
-import DOMPurify from 'dompurify';
 
 const files = import.meta.glob('/src/randomcontent/**/*.md', { as: 'raw', eager: true }) as Record<string, string>;
 
@@ -69,10 +68,18 @@ export default function ContentRandom() {
             setMeta(title, description, image);
         }, [slug]);
 
-        const html = useMemo(() => {
-            const rendered = marked.parse(post.body);
-            return DOMPurify.sanitize(typeof rendered === 'string' ? rendered : '');
-        }, [post.body]);
+        const html = marked.parse(post.body) as string;
+
+        useEffect(() => {
+            if ((window as any).twttr && (window as any).twttr.widgets) {
+                (window as any).twttr.widgets.load();
+            } else {
+                const script = document.createElement('script');
+                script.src = 'https://platform.twitter.com/widgets.js';
+                script.async = true;
+                document.body.appendChild(script);
+            }
+        }, [html]);
 
         return (
             <article>
@@ -80,7 +87,7 @@ export default function ContentRandom() {
                 {post.meta.date && <small>{post.meta.date}</small>}
                 <div class="markdown" dangerouslySetInnerHTML={{ __html: html }} />
                 <div class="custom-divider-bottom" />
-                <p><Link href="/random">← Back to Random index</Link></p>
+                <a href="#/random">← Back to Random</a>
             </article>
         );
     }
@@ -99,9 +106,9 @@ export default function ContentRandom() {
 
                 <div>
                     {allPosts.map(p => (
-                        <div class="custom-caption" key={p.slug}>
+                        <div class="list-of-random" key={p.slug}>
                             {p.meta.date ? <small>({p.meta.date}) </small> : null}
-                            <Link href={`/random/${p.slug}`}>{p.meta.title || p.slug}</Link>
+                            <a href={`#/random/${p.slug}`}>{p.meta.title || p.slug}</a>
                         </div>
                     ))}
                 </div>

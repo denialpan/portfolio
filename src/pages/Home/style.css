@@ -151,9 +151,28 @@
     display: none;
 }
 
-.markdown h1 {
-    color: red;
+.list-of-random {
+    color: var(--text);
+    transition: color var(--transition-time) ease;
 }
+
+.list-of-random a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+/** markdown specifics **/
+
+.markdown :is(h1, h2, h3, h4, h5) {
+    text-decoration: none;
+    font-family: "JetBrainsMono";
+}
+
+.markdown p {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/** end markdown specifics **/
 
 @media (pointer: coarse) or (max-width: 768px) {
 
