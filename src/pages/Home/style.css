@@ -151,6 +151,10 @@
     display: none;
 }
 
+.markdown h1 {
+    color: red;
+}
+
 @media (pointer: coarse) or (max-width: 768px) {
 
     main {

@@ -92,9 +92,16 @@ export function Home() {
                         <Route path="/projects">
                             <ContentProjects />
                         </Route>
+
+                        <Route path="/random/:slug">
+                            <ContentRandom />
+                        </Route>
+
                         <Route path="/random">
                             <ContentRandom />
                         </Route>
+
+
                         <Route><ContentHome /></Route>
                     </Switch>
                 </Router>

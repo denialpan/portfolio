@@ -5,6 +5,11 @@ import { NotFound } from './pages/404.js';
 import './style.css';
 import './font.css';
 
+import { Buffer } from 'buffer';
+if (!(window as any).Buffer) {
+    (window as any).Buffer = Buffer;
+}
+
 export function App() {
     return (
         <LocationProvider>
