@@ -9,8 +9,8 @@
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
+        "astro": "^5.14.1",
         "buffer": "^6.0.3",
-        "dompurify": "^3.2.7",
         "marked": "^16.4.0",
         "preact": "^10.26.9",
         "preact-iso": "^2.10.0",

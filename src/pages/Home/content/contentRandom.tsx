@@ -1,5 +1,9 @@
 import { useEffect } from 'preact/hooks';
+<<<<<<< HEAD
 import { Link, useRoute, useLocation } from 'wouter-preact';
+=======
+import { useRoute, useLocation } from 'wouter-preact';
+>>>>>>> ca344c34c392111fa8b165a4a36c9134fd832327
 import { parse as parseYAML } from 'yaml';
 import { marked } from 'marked';
 import { setMeta } from '../../../utils/setmeta';
@@ -76,7 +80,7 @@ export default function ContentRandom() {
                 {post.meta.date && <small>{post.meta.date}</small>}
                 <div class="markdown" dangerouslySetInnerHTML={{ __html: html }} />
                 <div class="custom-divider-bottom" />
-                <p><Link href="/random">← Back to Random index</Link></p>
+                <a href="#/random">← Back to Random</a>
             </article>
         );
     }
