@@ -53,6 +53,18 @@ export default function ContentRandom() {
     const [, setLocation] = useLocation();
     const slug = match ? params?.slug : undefined;
 
+    const { archived, active } = allPosts.reduce(
+        (acc, p) => {
+            if (p.meta.status?.toLowerCase().includes("archived")) {
+                acc.archived.push(p);
+            } else {
+                acc.active.push(p);
+            }
+            return acc;
+        },
+        { archived: [] as Post[], active: [] as Post[] }
+    );
+
     if (slug) {
 
         const post = allPosts.find(p => p.slug === slug);
@@ -74,9 +86,16 @@ export default function ContentRandom() {
             <article>
                 {post.meta.title && <div class="custom-header">{post.meta.title}</div>}
                 {post.meta.date && <small>{post.meta.date}</small>}
+                {post.meta.status === "archived" && <small> ({post.meta.status})</small>}
+
+                <div class="custom-divider-bottom" >
+                    {post.meta.description && <p>{post.meta.description}</p>}
+                </div>
+
                 <div class="markdown" dangerouslySetInnerHTML={{ __html: html }} />
+
                 <div class="custom-divider-bottom" />
-                <a href="#/random">← Back to Random</a>
+                <a class="random-footer" href="#/random">← Back to Random</a>
             </article>
         );
     }
@@ -94,12 +113,27 @@ export default function ContentRandom() {
                 </div>
 
                 <div>
-                    {allPosts.map(p => (
-                        <div class="list-of-random" key={p.slug}>
-                            {p.meta.date ? <small>({p.meta.date}) </small> : null}
-                            <a href={`#/random/${p.slug}`}>{p.meta.title || p.slug}</a>
-                        </div>
-                    ))}
+                    {active
+                        .map(p => (
+                            <div class="list-all-random" key={p.slug}>
+                                {p.meta.date ? <code>({p.meta.date}) </code> : null}
+
+                                <a href={`#/random/${p.slug}`}>{p.meta.title || p.slug}</a>
+
+                            </div>
+                        ))}
+                </div>
+
+
+                <div>
+                    <i>Archived thoughts or ideas that I no longer need</i>
+                    {archived
+                        .map(p => (
+                            <div class="list-all-random" key={p.slug}>
+                                {p.meta.date ? <code>({p.meta.date}) </code> : null}
+                                <a href={`#/random/${p.slug}`}>{p.meta.title || p.slug}</a>
+                            </div>
+                        ))}
                 </div>
 
             </div>
