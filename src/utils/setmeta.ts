@@ -1,5 +1,5 @@
 export function setMeta(title: string, description?: string, image?: string) {
-  document.title = title;
+  document.title = "daniel pan - " + title;
 
   let desc = document.querySelector('meta[name="description"]');
   if (!desc) {

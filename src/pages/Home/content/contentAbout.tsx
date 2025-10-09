@@ -1,4 +1,9 @@
+import { setMeta } from "../../../utils/setmeta"
+
 export default function ContentAbout() {
+
+    setMeta("about", "short summary about me");
+
     return (
         <>
             <div class="description-all">

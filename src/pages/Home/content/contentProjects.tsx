@@ -5,11 +5,11 @@ import danverter1 from '../../../assets/images/danverter1.png';
 import s4shadowplay from '../../../assets/images/s4-shadowplay.png'
 import db1 from '../../../assets/images/db1.png'
 import db2 from '../../../assets/images/db2.png'
-
-
-
+import { setMeta } from '../../../utils/setmeta';
 
 export default function ContentProjects() {
+
+    setMeta("projects", "projects page of things i've worked on");
 
     return (
 

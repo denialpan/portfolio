@@ -49,6 +49,7 @@ const allPosts: Post[] = Object.entries(files).map(([path, raw]) => {
 
 export default function ContentRandom() {
 
+    setMeta("random", "random thoughts and ideas and posts and stuff");
     const [match, params] = useRoute('/random/:slug');
     const [, setLocation] = useLocation();
     const slug = match ? params?.slug : undefined;

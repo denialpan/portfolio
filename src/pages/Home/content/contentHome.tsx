@@ -1,7 +1,10 @@
 import minedemo from '../../../assets/video/minedemov2.mp4';
 import s4shadowplay from '../../../assets/images/s4-shadowplay.png'
+import { setMeta } from '../../../utils/setmeta';
 
 export default function ContentHome() {
+
+    setMeta("home", "home page of latest projects");
 
     return (
 
