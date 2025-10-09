@@ -1,6 +1,6 @@
 ---
-title: "Abusing Counter-Strike 2's subtick system with desubticking"
-date: "10/7/2025"
+title: "real thing"
+date: "99/99/9999"
 ---
 
 # zap

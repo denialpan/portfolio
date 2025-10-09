@@ -1,6 +1,6 @@
 ---
 title: "This is a test"
-date: "10/8/2025"
+date: "10/08/2025"
 description: "This is rudimentary test for basic styling through markdown, where I mess around to finding a consistent and readable theme. There is nothing meaningful here."
 status: "archived"
 ---
@@ -37,7 +37,7 @@ P for paragraph. The decided font for paragraph text will be system determined, 
 <video controls>
   <source src="/portfolio/randomcontentassets/test/testace.mp4" type="video/webm">
 </video>
-    <figcaption><i>test video of a quick ace</i></figcaption>
+    <figcaption><i>test video of a quick ace in a <code>figure</code> div</i></figcaption>
 
 </figure>
 
