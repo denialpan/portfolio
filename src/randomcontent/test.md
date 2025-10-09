@@ -44,8 +44,8 @@ P for paragraph. The decided font for paragraph text will be system determined, 
 P for paragraph. The decided font for paragraph text will be system determined, such that large amount of text is visually pleasing and fast to load with no custom webpack or such.
 P for paragraph. The decided font for paragraph text will be system determined, such that large amount of text is visually pleasing and fast to load with no custom webpack or such.
 
-## a simple youtube embed
+## a good song
 
-<iframe src="https://www.youtube.com/embed/videoseries?si=QiDFsCRRyXkai4H8&amp;list=PL4Pjqr7tZBKzmkhXaiDPNLhzM6mDGN_Md" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1Gu4Y5f3KMo?si=X3IgUg3H2Et1ITii" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 end text end text end text end text end text end text end text

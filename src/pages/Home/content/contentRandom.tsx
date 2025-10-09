@@ -106,11 +106,11 @@ export default function ContentRandom() {
 
             <div class="description-all">
                 <div class="description-text">
-                    This is a general of some random thoughts, notes, or ideas I've had.
+                    This is a collection of some random thoughts, notes, or ideas I have.
                 </div>
 
                 <div class="description-text custom-divider-bottom">
-                    Not really a blog persay, this is more like a random public notepad.
+                    Not really a blog, this is more like a random public notepad.
                 </div>
 
                 <div>

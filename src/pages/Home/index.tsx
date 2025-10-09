@@ -27,8 +27,7 @@ export function Home() {
 
                 <div class="stats custom-divider-bottom">
                     <div>
-                        22 year old graduating from GT
-
+                        23 year old graduating from GT
                     </div>
                     <div>
                         React, C++, Python, Java
