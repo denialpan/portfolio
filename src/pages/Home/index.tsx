@@ -52,7 +52,7 @@ export function Home() {
                         <a href="#/projects">Projects</a>
                         <a href="#/random">Random</a>
                     </div>
-                    <div class="resume-main" onClick={() => window.open("https://raw.githubusercontent.com/denialpan/portfolio/552d4cc79944dab6eb1e4bc473422aef20beecfe/src/assets/Daniel%20Pan%20-%20Resume.pdf", "_blank", "noopener,noreferrer")} >
+                    <div class="resume-main" onClick={() => window.open("https://raw.githubusercontent.com/denialpan/portfolio/191229093f51959252084562ce2b09b74b8ca744/src/assets/Daniel%20Pan%20-%20Resume.pdf", "_blank", "noopener,noreferrer")} >
                         RESUME
                     </div>
                 </div>
