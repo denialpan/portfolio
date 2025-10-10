@@ -51,6 +51,7 @@ shortened version of a community <a href="https://www.reddit.com/r/GlobalOffensi
 </figure>
 
 https://x.com/eugenio8a8/status/1937254901731438603
+https://www.reddit.com/r/GlobalOffensive/comments/17nfapm/subtick_and_jumping_analysis/
 
 ### Interactions with a desubtick configuration
 
