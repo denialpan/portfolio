@@ -28,7 +28,7 @@ One of the game's most popular mechanics has historically relies on the principl
 
 During the time of the game's initial release to 2024, Valve implemented various ways to remove player-created configs for the game, largely the "jump-throw" bind. This was a bind during CS:GO that players would need to actively write in a `.cfg` file to guarantee a consistent throwing of utility while jumping. Valve's native implementation of jump-throwing into the CS:2 acknowledged that to some degree, these type of player made configurations would no longer be necessary and would be on the lookout to be phased out.
 
-An effect of subticking that players noticed was that simple movement was inconsistent and described as "floaty", giving players a large dissatisfaction towards the competitive nature that Counter-Strike was. This resulted in an entire configuration of "desubticking input" to be created, where player input would be consistent and more deterministic, as well as reintroducing jump-throw binds.
+An effect of subticking that players noticed was that simple movement was inconsistent and described as "floaty", giving players a large dissatisfaction towards the competitive nature that Counter-Strike was. This resulted in an entire new generation of configuration of "desubticking input" to be discovered, where player input would be consistent and more deterministic, as well as reintroducing jump-throw binds.
 
 ```
 // echo cs2 desubtick config by gliptal (10/17/23 update)
@@ -46,12 +46,36 @@ alias -runthrow "-forward_"
 
 <figure>
 <figcaption>
-shortened version of a community <a href="https://www.reddit.com/r/GlobalOffensive/comments/17ah0sl/full_desubtick_config_new_runthrow_bind/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" target="_blank" rel="noopener noreferrer"> shared config </a> to desubtick input 
+shortened version of a early community <a href="https://www.reddit.com/r/GlobalOffensive/comments/17ah0sl/full_desubtick_config_new_runthrow_bind/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" target="_blank" rel="noopener noreferrer"> shared config </a> to primitively desubtick input 
 </figcaption>
 </figure>
 
+Valve's disabling of following actions: https://steamdb.info/patchnotes/15424813/
+
+created more complex methods of desubticking without automation. 
+
+movement could still be desubticked, 
+
+early existence of how desubticking worked: https://x.com/poggu__/status/1710565076036415768
+
+new early 64 fps discovery: https://www.reddit.com/r/GlobalOffensive/comments/17crjvh/how_to_desubtick_the_entire_game_with_one_console/
+
 https://x.com/eugenio8a8/status/1937254901731438603
-https://www.reddit.com/r/GlobalOffensive/comments/17nfapm/subtick_and_jumping_analysis/
+follow up: https://x.com/eugenio8a8/status/1935373468603760669
+
+counter argument: https://www.reddit.com/r/GlobalOffensive/comments/1ll5eir/subtick_groundmovement_is_not_inconsistent/
+
+valve supported explicitly: https://x.com/basisspace/status/1720851655640408371 https://www.reddit.com/r/GlobalOffensive/comments/17nfapm/subtick_and_jumping_analysis/
+
+https://www.reddit.com/r/GlobalOffensive/comments/17p2cq3/subtick_for_movement_doesnt_even_work_in_theory/
+https://www.reddit.com/r/GlobalOffensive/comments/16kgxg0/cs2_psa_why_shots_that_seem_to_land_behind/
+https://www.reddit.com/r/GlobalOffensive/comments/173sk5k/a_summary_of_the_complaints_that_i_have_read/
+https://www.reddit.com/r/GlobalOffensive/comments/1kfffvy/why_the_spray_feels_off_in_cs2/
+https://www.reddit.com/r/GlobalOffensive/comments/1n6olgh/real_reason_behind_stuttersbad_1_lows/
+
+pro league controversy: https://www.reddit.com/r/GlobalOffensive/comments/17aggaf/iem_sydney_will_not_use_the_latest_patch_because/
+
+funny: https://www.reddit.com/r/GlobalOffensive/comments/17an241/cs2_subtick_is_hilarious_what_you_see_is_what_you/
 
 ### Interactions with a desubtick configuration
 
@@ -81,3 +105,9 @@ nade lineups
 ## Movement after another update with uncapped 64
 
 ## Desubtick exploit fixed
+
+Conclusion: https://github.com/zer0k-z/cs2-movement-issues
+
+References:
+
+https://developer.valvesoftware.com/wiki/CFG
