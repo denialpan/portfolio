@@ -181,6 +181,27 @@
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+.markdown a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.markdown blockquote {
+    font-style: italic;
+    border-left: 2px solid;
+    border-color: var(--secondary);
+    padding-left: 10px;
+    margin-inline: 15px;
+}
+
+.markdown pre {
+    border-radius: 5px;
+    margin-inline: 15px;
+    padding: 15px;
+    background-color: var(--tertiary);
+    overflow-x: auto;
+}
+
 .markdown video {
     width: 100%;
     max-width: 560px;
@@ -196,6 +217,18 @@
     height: auto;
     border: 0;
 }
+
+.markdown figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.markdown figcaption {
+    font-style: italic;
+    color: var(--secondary);
+}
+
 
 /** end markdown specifics **/
 

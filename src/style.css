@@ -7,6 +7,7 @@
     --text: #111111;
     --accent: #7500FF;
     --secondary: #AAAAAA;
+    --tertiary: #DADCE3;
     --icon: none;
     --darktheme-icon-rotate: rotate(0deg);
     --transition-time: 500ms;
@@ -34,6 +35,7 @@ html[data-theme="dark"] {
     --bg: #111111;
     --text: #e5e7eb;
     --secondary: #444444;
+    --tertiary: #171717;
     --icon: invert(1);
     --darktheme-icon-rotate: rotate(180deg);
 }
