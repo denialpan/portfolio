@@ -1,6 +1,6 @@
 ---
 title: "Abusing Counter-Strike 2's subtick system with desubticking"
-date: "10/09/2025"
+date: "10/11/2025"
 description: 'Short objective overview of Valve''s new subtick system and the 2 month rollercoaster timeline on 2024 "64-fps" movement exploit.'
 status: "current"
 ---
@@ -157,7 +157,7 @@ Valve has been more open through various patch notes of attempting to change the
 
 Community members have gone and have written long writeups in testing all aspects of the game, of jumping, moving, firing, hit registration and sharing their findings. <b>Unfortunately, there is rarely a clear confirmation on which analysis is correct</b> beyond just isolated testing and the eventual updating of the game, as well as one's finding possibly disputing another's, and is not the purpose of this page's writing.
 
-The importance of the effort and the dedication to providing Valve feedback as well as the knowledge to the playerbase is extremely rare to see in other gaming circles. To showcase this, below are a view of in-depth explanations and references used, <i>as well as likely the only explicit instance of a Valve employee supporting an specific analysis. </i>
+The importance of the effort and the dedication to providing Valve feedback as well as the knowledge to the playerbase is extremely rare to see in other gaming circles. To showcase this, below are a view of in-depth explanations and references used, <i>as well as likely the only explicit instance of a Valve employee supporting a specific analysis. </i>
 
 Actively supported by Valve or related entity:
 
