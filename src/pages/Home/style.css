@@ -177,6 +177,10 @@
     margin-bottom: 10px;
 }
 
+.markdown caption {
+    text-align: center;
+}
+
 .markdown p {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
@@ -187,7 +191,6 @@
 }
 
 .markdown blockquote {
-    font-style: italic;
     border-left: 2px solid;
     border-color: var(--secondary);
     padding-left: 10px;
@@ -197,6 +200,7 @@
 .markdown pre {
     border-radius: 5px;
     margin-inline: 15px;
+    margin-bottom: 0px;
     padding: 15px;
     background-color: var(--tertiary);
     overflow-x: auto;
@@ -227,8 +231,16 @@
 .markdown figcaption {
     font-style: italic;
     color: var(--secondary);
+    text-align: center;
 }
 
+.twitter-tweet iframe {
+    color-scheme: light;
+}
+
+.twitter-timeline {
+    height: 10px !important;
+}
 
 /** end markdown specifics **/
 
