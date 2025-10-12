@@ -86,6 +86,22 @@ export default function ContentRandom() {
 
         const html = marked.parse(post.body) as string;
 
+        useEffect(() => {
+            const container = document.querySelector('.markdown');
+            if (!container) return;
+
+            const scripts = container.querySelectorAll('script');
+            scripts.forEach((oldScript) => {
+                const newScript = document.createElement('script');
+                for (const attr of oldScript.attributes) {
+                    newScript.setAttribute(attr.name, attr.value);
+                }
+                newScript.text = oldScript.text;
+                oldScript.replaceWith(newScript);
+            });
+
+        }, [slug]);
+
         return (
             <article>
                 {post.meta.title && <div class="custom-header">{post.meta.title}</div>}
