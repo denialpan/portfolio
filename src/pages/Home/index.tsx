@@ -32,7 +32,7 @@ export function Home() {
                     <div>
                         React, C++, Python, Java
                     </div>
-                    <div style={{ color: "var(--secondary)" }}>
+                    <div class="shift-gradient-animation" style={{ color: "var(--secondary)" }}>
                         digitally preserving myself
                     </div>
                 </div>

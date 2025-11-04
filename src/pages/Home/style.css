@@ -169,6 +169,24 @@
     text-decoration: none;
 }
 
+.shift-gradient-animation {
+    background: -webkit-linear-gradient(0deg, var(--accent), var(--bg), var(--accent));
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slide 3s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: -200% 0%;
+    }
+}
+
 /** markdown specifics **/
 
 .markdown :is(h1, h2, h3, h4, h5) {
