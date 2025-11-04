@@ -21,8 +21,6 @@ export default function ContentAbout() {
 
                 <div class="description-text custom-divider-bottom">
                     Much of my work is built trying to use as minimal libraries or third-party packages as much as possible. This is an arbitrary goal that encourages me to learn at the lowest level before specifics are abstracted away.
-
-
                 </div>
 
                 <div class="custom-header">
@@ -34,7 +32,7 @@ export default function ContentAbout() {
                 </div>
 
                 <div class="description-text custom-divider-bottom">
-                    By restricting myself this way, I come up with solutions to writing modular efficient code and carefully deciding on using third-party tools if they also follow the same philosophy. Prominent examples can be found in my Projects page, with a listing of languages and frameworks that are used.
+                    By restricting myself this way, I come up with solutions to writing modular efficient code and carefully deciding on using third-party tools if they also follow the same philosophy. Prominent examples can be found in my <a href="#/projects" style={{ color: "var(--accent)", textDecoration: "none" }}> Projects</a> page, with a listing of languages and frameworks that are used.
                 </div>
 
                 <div class="custom-header">

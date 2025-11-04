@@ -107,23 +107,24 @@
 .description-all {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .description-text {
-    font-family: "JetBrainsMono";
-    font-size: 20px;
+    /* font-family: "JetBrainsMono"; */
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
 }
 
 .custom-header {
     color: var(--accent);
-    font-family: "Montserrat";
-    font-size: 24px;
+    font-family: "JetBrainsMono";
+    font-size: 20px;
 }
 
 .custom-caption {
     color: var(--text);
-    font-family: "JetBrainsMono";
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     transition: color var(--transition-time) ease;
 }
 

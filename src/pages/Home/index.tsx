@@ -32,8 +32,8 @@ export function Home() {
                     <div>
                         React, C++, Python, Java
                     </div>
-                    <div>
-                        learning to cook more
+                    <div style={{ color: "var(--secondary)" }}>
+                        digitally preserving myself
                     </div>
                 </div>
 
