@@ -105,11 +105,10 @@ export default function ContentRandom() {
         return (
             <article>
                 {post.meta.title && <div class="custom-header">{post.meta.title}</div>}
-                {post.meta.date && <small>{post.meta.date}</small>}
+                {post.meta.description && <p style={{ margin: 0 }}>{post.meta.description}</p>}
                 {post.meta.status === "archived" && <small> ({post.meta.status})</small>}
-
                 <div class="custom-divider-bottom">
-                    {post.meta.description && <p>{post.meta.description}</p>}
+                    {post.meta.date && <small>{post.meta.date}</small>}
                 </div>
 
                 <div class="markdown" dangerouslySetInnerHTML={{ __html: html }} />
