@@ -216,6 +216,15 @@
     margin-inline: 15px;
 }
 
+.markdown hr {
+    height: 1px;
+    border: none;
+    border-bottom: 1px solid;
+    border-color: var(--secondary);
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
 .markdown pre {
     border-radius: 5px;
     margin-inline: 15px;

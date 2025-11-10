@@ -19,8 +19,13 @@ export default function ContentAbout() {
                     My Ideals
                 </div>
 
+
+                <div class="description-text">
+                    Much of my work is built trying to use as minimal necessary libraries or third-party packages as much as possible. This is an arbitrary goal that encourages me to learn at the lowest level before specifics are abstracted away.
+                </div>
+
                 <div class="description-text custom-divider-bottom">
-                    Much of my work is built trying to use as minimal libraries or third-party packages as much as possible. This is an arbitrary goal that encourages me to learn at the lowest level before specifics are abstracted away.
+                    This is unlike reinventing the wheel, but because software and products should be <a href="#/random/preservation" style={{ color: "var(--accent)", textDecoration: "none" }}>timeless</a> in that the state of functionality remains unchanged decades into the future, the less abstraction layers or points of failure in libraries/binaries the better.
                 </div>
 
                 <div class="custom-header">

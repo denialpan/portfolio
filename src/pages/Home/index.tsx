@@ -32,7 +32,7 @@ export function Home() {
                     <div>
                         React, C++, Python, Java
                     </div>
-                    <div class="shift-gradient-animation" style={{ color: "var(--secondary)" }}>
+                    <div class="shift-gradient-animation" style={{ color: "var(--secondary)", cursor: "pointer" }} onClick={() => window.open("https://world.danielpan.xyz/")}>
                         digitally preserving myself
                     </div>
                 </div>
