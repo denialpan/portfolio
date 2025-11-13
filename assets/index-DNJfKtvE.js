@@ -285,7 +285,7 @@ I mentioned that I was able to play the same exact Minecraft world again, specif
 \r
 The preservation of Minecraft is also demonstrated in its simple but expressive nature of the game, and has grown into the concept of a Minecraft "forever world", where a player plays the same world for years. The preserving nature of Minecraft's digital world is enticing for me to go on the same journey as others, such that decades in the future, I experience what I was like, what my thoughts were, and what I did.\r
 \r
-An unedited playthrough [playlist](https://www.youtube.com/watch?v=57JmZTpGRgw&list=PLGmxEcY8emvCbP7JpeeDcAg0Skv1gRBxR) I plan to archive over time, with a world view in [browser](https://world.danielpan.xyz/), as well as a simple [screenshot mod](https://modrinth.com/mod/sporadic-screenshot).\r
+An unedited playthrough [playlist](https://www.youtube.com/playlist?list=PLGmxEcY8emvDmYyVuzWvlyHxVSGVD1uco) I plan to archive over time, with a world view in [browser](https://world.danielpan.xyz/), as well as a simple [screenshot mod](https://modrinth.com/mod/sporadic-screenshot).\r
 \r
 # Conclusion\r
 \r
