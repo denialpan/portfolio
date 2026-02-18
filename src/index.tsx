@@ -1,4 +1,4 @@
-import { LocationProvider, hydrate, prerender as ssr } from 'preact-iso';
+import { LocationProvider, hydrate } from 'preact-iso';
 import { Router, Route, Switch } from "wouter-preact";
 import { Home } from './pages/Home/index.jsx';
 import { NotFound } from './pages/404.js';
@@ -33,8 +33,4 @@ export function App() {
 
 if (typeof window !== 'undefined') {
     hydrate(<App />, document.getElementById('app'));
-}
-
-export async function prerender(data) {
-    return await ssr(<App {...data} />);
 }

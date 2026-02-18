@@ -1,7 +1,7 @@
 import { Router, Route, Switch } from "wouter-preact";
 import { useHashLocation } from "wouter-preact/use-hash-location";
 import './style.css';
-import pfp from '../../assets/images/me.jpg'
+import pfp from '../../assets/images/me.png'
 import ContentHome from "./content/contentHome";
 import ContentAbout from "./content/contentAbout";
 import { useTheme } from "../../hooks/useTheme";
@@ -32,7 +32,7 @@ export function Home() {
                     <div>
                         React, C++, Python, Java
                     </div>
-                    <div class="shift-gradient-animation" style={{ color: "var(--secondary)", cursor: "pointer" }} onClick={() => window.open("https://world.danielpan.xyz/")}>
+                    <div class="shift-gradient-animation" style={{ color: "var(--secondary)" }}>
                         digitally preserving myself
                     </div>
                 </div>
