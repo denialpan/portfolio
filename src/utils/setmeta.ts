@@ -1,11 +1,11 @@
-export function setMeta(title: string, description?: string, image?: string) {
-  document.title = "daniel pan - " + title;
+export function setMeta(title: string, description?: string) {
+    document.title = "daniel pan - " + title;
 
-  let desc = document.querySelector('meta[name="description"]');
-  if (!desc) {
-    desc = document.createElement('meta');
-    desc.setAttribute('name', 'description');
-    document.head.appendChild(desc);
-  }
-  desc.setAttribute('content', description || '');
+    let desc = document.querySelector('meta[name="description"]');
+    if (!desc) {
+      desc = document.createElement('meta');
+      desc.setAttribute('name', 'description');
+      document.head.appendChild(desc);
+    }
+    desc.setAttribute('content', description || '');
 }

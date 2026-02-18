@@ -8,7 +8,7 @@ export default function ContentAbout() {
         <>
             <div class="description-all">
                 <div class="custom-header">
-                    About
+                    Me
                 </div>
 
                 <div class="description-text custom-divider-bottom">

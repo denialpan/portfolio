@@ -12,22 +12,33 @@ import linkedin from '../../assets/icons/linkedin.svg';
 import { NameChange } from '../../animations/nameChange';
 import ContentProjects from "./content/contentProjects";
 import ContentRandom from "./content/contentRandom";
+import {useState} from "preact/hooks";
 
 export function Home() {
 
     const { theme, toggle } = useTheme();
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <div class="home-entire">
 
-            <div class="home-left">
+            <button class="hamburger" onClick={() => {
+                setMenuOpen(!menuOpen);
+                console.log("hello")
+            }}>
+                ☰
+            </button>
+
+            <aside class={`home-left ${menuOpen ? "open" : ""}`} onClick={() => {
+                setMenuOpen(false);
+            }}>
 
                 <NameChange defaultText="Daniel Pan" />
                 <img src={pfp} alt="this is me" width={200} height={200} class="pfp" />
 
                 <div class="stats custom-divider-bottom">
                     <div>
-                        23 year old graduating from GT
+                        23 year old graduate from <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "var(--accent)"}}>GT</a>
                     </div>
                     <div>
                         React, C++, Python, Java
@@ -37,7 +48,7 @@ export function Home() {
                     </div>
                 </div>
 
-                <div class="desktop-nav">
+                <nav class="desktop-nav">
                     <div class="icon-contact">
 
                         <img src={github} alt="github" width={32} height={32} onClick={() => window.open("https://github.com/denialpan/", "_blank", "noopener,noreferrer")} />
@@ -55,31 +66,14 @@ export function Home() {
                     <div class="resume-main" onClick={() => window.open("https://raw.githubusercontent.com/denialpan/portfolio/191229093f51959252084562ce2b09b74b8ca744/src/assets/Daniel%20Pan%20-%20Resume.pdf", "_blank", "noopener,noreferrer")} >
                         RESUME
                     </div>
-                </div>
-
-                <div class="mobile-nav custom-divider-bottom">
+                </nav>
 
 
-                    <div class="icon-contact">
+            </aside>
 
-                        <img src={github} alt="github" width={32} height={32} />
-                        <img src={linkedin} alt="linkedin" width={32} height={32} />
-                        <img src={facebook} alt="facebook" width={32} height={32} />
-                        <img src={darktheme} alt="toggle theme" width={32} height={32} class="darktheme-icon" onClick={toggle} />
-
-                    </div>
-                    <div class="link-section ">
-                        <a href="#/">Home</a>
-                        <a href="#/about">About</a>
-                        <a href="#/projects">Projects</a>
-                        <a href="#/random">Random</a>
-                        <a href="https://raw.githubusercontent.com/denialpan/portfolio/552d4cc79944dab6eb1e4bc473422aef20beecfe/src/assets/Daniel%20Pan%20-%20Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="home-right custom-divider-left">
+            <div class="home-right custom-divider-left" onClick={() => {
+                setMenuOpen(false);
+            }}>
                 <Router hook={useHashLocation}>
                     <Switch>
                         <Route path="/">
@@ -99,7 +93,6 @@ export function Home() {
                         <Route path="/random">
                             <ContentRandom />
                         </Route>
-
 
                         <Route><ContentHome /></Route>
                     </Switch>

@@ -25,22 +25,13 @@ Even so, I still keep my own mindset in strictly evaluating the tradeoffs whethe
 
 # Qualitative Preservation
 
-Nostalgia is a wonderful thing, and recently I have gotten over a wave of feeling it. I feel fortunate enough that much of my early fond experiences can be accessible due to digital preservation, giving me the opportunity to relieve experiences again. Video games contribute heavily to this, and the case of emulation and backports to relieve old games has helped a lot in feeling nostalgia again, and most importantly, the incentive to move on and do new things.
-
-Major waves of nostalgia that I experienced:
-
-- Age 16: playing and completing (100%) Super Mario Galaxy 1 and 2 after coming back to the game. First experience of nostalgia before I knew what that was.
-- Age 23: playing the first ever Minecraft world and version again.
+It is fortunate that much of my early fond experiences can be accessible due to digital preservation, giving me the opportunity to relieve experiences again. Video games contribute heavily to this, and the case of emulation and backports to relieve old games has helped a lot in feeling nostalgia again, and most importantly, the incentive to move on and do new things.
 
 Minecraft is the greatest example of the best digital preservation that the internet and its developers collectively have done. Referencing back to online services terminated, it is sad to see software that rely on them to be forever gone. A majority of Google services and products are like this with over [200 dead products](https://killedbygoogle.com/), and gaming companies that take use Always-On DRM are no different, leaving many titles forever unplayable if a company decides to no longer maintain its servers for "reasons".
 
 In contrast, the developers of Minecraft allow nearly every version that has ever been distributed or showcased to be accessible and playable in its vanilla launcher, and because of its impact on many of its players in early 2010s, it is the greatest work of digital permanence. Old versions of the game are, in fact, so impactful and often referenced that some players prefer to play on older versions.
 
 I mentioned that I was able to play the same exact Minecraft world again, specifically in the nature that it was a demo version of Minecraft and its version and world seed has been recorded in [forums](https://www.minecraftforum.net/forums/minecraft-java-edition/seeds/301974-seed-of-the-map-used-in-pcgamers-demo-of-minecraft). Being able to revisit the same world and play through it again was a deep feeling of nostalgia, and also alleviated some bit of unconscious sadness because I lost the original world and its screenshots. While it was nice to play the world again, I got the feeling that I was overstaying my welcome in a previous world, and it was time to move on.
-
-The preservation of Minecraft is also demonstrated in its simple but expressive nature of the game, and has grown into the concept of a Minecraft "forever world", where a player plays the same world for years. The preserving nature of Minecraft's digital world is enticing for me to go on the same journey as others, such that decades in the future, I experience what I was like, what my thoughts were, and what I did.
-
-An unedited playthrough [playlist](https://www.youtube.com/playlist?list=PLGmxEcY8emvDmYyVuzWvlyHxVSGVD1uco) I plan to archive over time, with a world view in [browser](https://world.danielpan.xyz/), as well as a simple [screenshot mod](https://modrinth.com/mod/sporadic-screenshot).
 
 # Conclusion
 
