@@ -29,32 +29,49 @@ export function Home() {
                 ☰
             </button>
 
-            <aside class={`home-left ${menuOpen ? "open" : ""}`} onClick={() => {
-                setMenuOpen(false);
-            }}>
+            <aside class={`home-left ${menuOpen ? "open" : ""}`}>
 
-                <NameChange defaultText="Daniel Pan" />
-                <img src={pfp} alt="this is me" width={200} height={200} class="pfp" />
+
+                {menuOpen && (
+                    <button className="hamburger-menu" onClick={() => {
+                        setMenuOpen(!menuOpen);
+                        console.log("hello")
+                    }}>
+                        ☰
+                    </button>
+                )}
+
+                <NameChange defaultText="Daniel Pan"/>
+                <img src={pfp} alt="this is me" width={200} height={200} class="pfp"/>
 
                 <div class="stats custom-divider-bottom">
                     <div>
-                        23 year old graduate from <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "var(--accent)"}}>GT</a>
+                        23 year old graduate from <a href="https://www.gatech.edu/" target="_blank"
+                                                     rel="noopener noreferrer"
+                                                     style={{textDecoration: "none", color: "var(--accent)"}}>GT</a>
                     </div>
                     <div>
                         React, C++, Python, Java
                     </div>
-                    <div class="shift-gradient-animation" style={{ color: "var(--secondary)" }}>
+                    <div class="shift-gradient-animation" style={{color: "var(--secondary)"}}>
                         digitally preserving myself
                     </div>
                 </div>
 
-                <nav class="desktop-nav">
+                <nav class="desktop-nav" onClick={() => {
+                    setMenuOpen(false);
+                }}>
+
                     <div class="icon-contact">
 
-                        <img src={github} alt="github" width={32} height={32} onClick={() => window.open("https://github.com/denialpan/", "_blank", "noopener,noreferrer")} />
-                        <img src={linkedin} alt="linkedin" width={32} height={32} onClick={() => window.open("https://www.linkedin.com/in/danielpan-/", "_blank", "noopener,noreferrer")} />
-                        <img src={facebook} alt="facebook" width={32} height={32} onClick={() => window.open("https://www.facebook.com/danpan123/", "_blank", "noopener,noreferrer")} />
-                        <img src={darktheme} alt="toggle theme" width={32} height={32} class="darktheme-icon" onClick={toggle} />
+                        <img src={github} alt="github" width={32} height={32}
+                             onClick={() => window.open("https://github.com/denialpan/", "_blank", "noopener,noreferrer")}/>
+                        <img src={linkedin} alt="linkedin" width={32} height={32}
+                             onClick={() => window.open("https://www.linkedin.com/in/danielpan-/", "_blank", "noopener,noreferrer")}/>
+                        <img src={facebook} alt="facebook" width={32} height={32}
+                             onClick={() => window.open("https://www.facebook.com/danpan123/", "_blank", "noopener,noreferrer")}/>
+                        <img src={darktheme} alt="toggle theme" width={32} height={32} class="darktheme-icon"
+                             onClick={toggle}/>
 
                     </div>
                     <div class="link-section">
@@ -63,7 +80,8 @@ export function Home() {
                         <a href="#/projects">Projects</a>
                         <a href="#/random">Random</a>
                     </div>
-                    <div class="resume-main" onClick={() => window.open("https://raw.githubusercontent.com/denialpan/portfolio/bebef3a243fc45565cb2916e9a0305cde8b42274/src/assets/Daniel%20Pan%20-%20Resume.pdf", "_blank", "noopener,noreferrer")} >
+                    <div class="resume-main"
+                         onClick={() => window.open("https://raw.githubusercontent.com/denialpan/portfolio/bebef3a243fc45565cb2916e9a0305cde8b42274/src/assets/Daniel%20Pan%20-%20Resume.pdf", "_blank", "noopener,noreferrer")}>
                         RESUME
                     </div>
                 </nav>
@@ -75,10 +93,11 @@ export function Home() {
                 setMenuOpen(false);
             }}>
                 <Router hook={useHashLocation}>
-                    <Switch>
+                <Switch>
                         <Route path="/">
                             <ContentHome />
                         </Route>
+
                         <Route path="/about">
                             <ContentAbout />
                         </Route>
