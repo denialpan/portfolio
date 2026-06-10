@@ -15,12 +15,8 @@ export default function ContentProjects() {
 
         <div class="description-all">
 
-            <div class="description-text">
-                Here is a list of major projects that I've worked on that has extensively improved my programming skills.
-            </div>
-
             <div class="description-text custom-divider-bottom">
-                yes, a majority of my projects have prefix "dan-" and then the supposed thing, i am bad at naming stuff, i am not a narcissist
+                Here is a list of projects that I have completed, or am currently working on. 
             </div>
 
             <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dankeyboard", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
