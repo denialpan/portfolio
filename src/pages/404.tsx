@@ -1,5 +1,3 @@
-import clipahh from '../assets/video/404.mp4'
-
 export function NotFound() {
 
     return (
@@ -15,7 +13,7 @@ export function NotFound() {
                 preload="metadata"
                 poster="/thumb.jpg"
             >
-                <source src={clipahh} type="video/webm" />
+                <source src="/portfolio/404.mp4" type="video/mp4" />
             </video>
             <h3 style={{ fontFamily: "JetBrainsMono", textAlign: "center" }}>
                 csgo better than cs2

@@ -1,8 +1,9 @@
 import { useEffect } from 'preact/hooks';
-import { useRoute, useLocation } from 'wouter-preact';
+import { Link, useRoute } from 'wouter-preact';
 import { parse as parseYAML } from 'yaml';
 import { marked } from 'marked';
 import { setMeta } from '../../../utils/setmeta';
+import { NotFound } from '../../404';
 
 const files = import.meta.glob('/src/randomcontent/**/*.md', { as: 'raw', eager: true }) as Record<string, string>;
 
@@ -49,7 +50,6 @@ const allPosts: Post[] = Object.entries(files).map(([path, raw]) => {
 
 export default function ContentRandom() {
     const [match, params] = useRoute('/random/:slug');
-    const [, setLocation] = useLocation();
     const slug = match ? params?.slug : undefined;
 
     const post = slug ? allPosts.find(p => p.slug === slug) : undefined;
@@ -65,13 +65,6 @@ export default function ContentRandom() {
         }
     }, [post, slug]);
 
-    // redirect if slug exists but post not found
-    useEffect(() => {
-        if (slug && !post) {
-            setLocation('/random');
-        }
-    }, [slug, post, setLocation]);
-
     const { archived, active } = allPosts.reduce(
         (acc, p) => {
             if (p.meta.status?.toLowerCase().includes("archived")) acc.archived.push(p);
@@ -82,7 +75,7 @@ export default function ContentRandom() {
     );
 
     if (slug) {
-        if (!post) return null;
+        if (!post) return <NotFound />;
 
         const html = marked.parse(post.body) as string;
 
@@ -113,7 +106,7 @@ export default function ContentRandom() {
 
                 <div class="markdown" dangerouslySetInnerHTML={{ __html: html }} />
                 <div class="custom-divider-bottom" />
-                <a class="random-footer" href="#/random">← Back to Random</a>
+                <Link class="random-footer" href="/random">← Back to Random</Link>
             </article>
         );
     }
@@ -133,7 +126,7 @@ export default function ContentRandom() {
                     {active.map(p => (
                         <div class="list-all-random" key={p.slug}>
                             {p.meta.date ? <code>({p.meta.date}) </code> : null}
-                            <a href={`#/random/${p.slug}`}>{p.meta.title || p.slug}</a>
+                            <Link href={`/random/${p.slug}`}>{p.meta.title || p.slug}</Link>
                         </div>
                     ))}
                 </div>
@@ -143,7 +136,7 @@ export default function ContentRandom() {
                     {archived.map(p => (
                         <div class="list-all-random" key={p.slug}>
                             {p.meta.date ? <code>({p.meta.date}) </code> : null}
-                            <a href={`#/random/${p.slug}`}>{p.meta.title || p.slug}</a>
+                            <Link href={`/random/${p.slug}`}>{p.meta.title || p.slug}</Link>
                         </div>
                     ))}
                 </div>

@@ -1,3 +1,4 @@
+import { Link } from "wouter-preact";
 import { setMeta } from "../../../utils/setmeta"
 
 export default function ContentAbout() {
@@ -25,7 +26,7 @@ export default function ContentAbout() {
                 </div>
 
                 <div class="description-text custom-divider-bottom">
-                    This is unlike reinventing the wheel, but because software and products should be <a href="#/random/preservation" style={{ color: "var(--accent)", textDecoration: "none" }}>timeless</a> in that the state of functionality remains unchanged decades into the future, the less abstraction layers or points of failure in libraries/binaries the better.
+                    This is unlike reinventing the wheel, but because software and products should be <Link href="/random/preservation" style={{ color: "var(--accent)", textDecoration: "none" }}>timeless</Link> in that the state of functionality remains unchanged decades into the future, the less abstraction layers or points of failure in libraries/binaries the better.
                 </div>
 
                 <div class="custom-header">
@@ -37,7 +38,7 @@ export default function ContentAbout() {
                 </div>
 
                 <div class="description-text custom-divider-bottom">
-                    By restricting myself this way, I come up with solutions to writing modular efficient code and carefully deciding on using third-party tools if they also follow the same philosophy. Prominent examples can be found in my <a href="#/projects" style={{ color: "var(--accent)", textDecoration: "none" }}> Projects</a> page, with a listing of languages and frameworks that are used.
+                    By restricting myself this way, I come up with solutions to writing modular efficient code and carefully deciding on using third-party tools if they also follow the same philosophy. Prominent examples can be found in my <Link href="/projects" style={{ color: "var(--accent)", textDecoration: "none" }}> Projects</Link> page, with a listing of languages and frameworks that are used.
                 </div>
 
                 <div class="custom-header">

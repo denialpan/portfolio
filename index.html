@@ -28,6 +28,12 @@
     </style>
     <script>
         (function () {
+            var redirect = sessionStorage.getItem('github-pages-redirect');
+            if (redirect) {
+                sessionStorage.removeItem('github-pages-redirect');
+                window.history.replaceState(null, '', redirect);
+            }
+
             try {
                 var key = 'theme-preference';
                 var ls = localStorage.getItem(key);

@@ -1,5 +1,4 @@
-import { Router, Route, Switch } from "wouter-preact";
-import { useHashLocation } from "wouter-preact/use-hash-location";
+import { Link, Route, Switch } from "wouter-preact";
 import './style.css';
 import pfp from '../../assets/images/me.png'
 import ContentHome from "./content/contentHome";
@@ -13,6 +12,7 @@ import { NameChange } from '../../animations/nameChange';
 import ContentProjects from "./content/contentProjects";
 import ContentRandom from "./content/contentRandom";
 import {useState} from "preact/hooks";
+import { NotFound } from "../404";
 
 export function Home() {
 
@@ -75,10 +75,10 @@ export function Home() {
 
                     </div>
                     <div class="link-section">
-                        <a href="#/">Home</a>
-                        <a href="#/about">About</a>
-                        <a href="#/projects">Projects</a>
-                        <a href="#/random">Random</a>
+                        <Link href="/">Home</Link>
+                        <Link href="/about">About</Link>
+                        <Link href="/projects">Projects</Link>
+                        <Link href="/random">Random</Link>
                     </div>
                     <div class="resume-main"
                          onClick={() => window.open("https://raw.githubusercontent.com/denialpan/portfolio/bebef3a243fc45565cb2916e9a0305cde8b42274/src/assets/Daniel%20Pan%20-%20Resume.pdf", "_blank", "noopener,noreferrer")}>
@@ -92,7 +92,6 @@ export function Home() {
             <div class="home-right custom-divider-left" onClick={() => {
                 setMenuOpen(false);
             }}>
-                <Router hook={useHashLocation}>
                 <Switch>
                         <Route path="/">
                             <ContentHome />
@@ -113,9 +112,8 @@ export function Home() {
                             <ContentRandom />
                         </Route>
 
-                        <Route><ContentHome /></Route>
-                    </Switch>
-                </Router>
+                        <Route><NotFound /></Route>
+                </Switch>
             </div>
         </div >
     );
