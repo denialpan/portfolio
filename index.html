@@ -28,6 +28,12 @@
     </style>
     <script>
         (function () {
+            var redirect = sessionStorage.getItem('github-pages-redirect');
+            if (redirect) {
+                sessionStorage.removeItem('github-pages-redirect');
+                window.history.replaceState(null, '', redirect);
+            }
+
             try {
                 var key = 'theme-preference';
                 var ls = localStorage.getItem(key);
@@ -40,8 +46,8 @@
             } catch (e) { }
         })();
     </script>
-  <script type="module" crossorigin src="/portfolio/assets/index-CW-h-aGS.js"></script>
-  <link rel="stylesheet" crossorigin href="/portfolio/assets/index-wdv3TxKb.css">
+  <script type="module" crossorigin src="/portfolio/assets/index-Cd7R4uVj.js"></script>
+  <link rel="stylesheet" crossorigin href="/portfolio/assets/index-D0ctljxs.css">
 </head>
 
 <body>
