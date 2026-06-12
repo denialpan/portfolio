@@ -3,14 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>daniel pan - 404</title>
+    <style>
+        @font-face {
+            font-family: "JetBrainsMono";
+            src: url("/portfolio/JetBrainsMono-Regular.woff2") format("woff2");
+        }
+
+        body {
+            margin: 0;
+            background: #0b1220;
+            color: #e5e7eb;
+            font-family: "JetBrainsMono", monospace;
+        }
+
+        main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: min(90vw, 800px);
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+
+        video {
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+    </style>
     <script>
-        sessionStorage.setItem(
-            'github-pages-redirect',
-            window.location.pathname + window.location.search + window.location.hash
-        );
-        window.location.replace('/portfolio/');
+        (function () {
+            var route = window.location.pathname.replace(/^\/portfolio\/?/, '/');
+            var appRoute = /^\/(?:about|projects|random(?:\/[^/]+)?)\/?$/.test(route);
+
+            if (appRoute) {
+                sessionStorage.setItem(
+                    'github-pages-redirect',
+                    window.location.pathname + window.location.search + window.location.hash
+                );
+                window.location.replace('/portfolio/');
+            }
+        })();
     </script>
 </head>
-<body></body>
+<body>
+    <main>
+        <h3>this is 404, but not like any other 404 you've seen</h3>
+        <video controls preload="metadata">
+            <source src="/portfolio/404.mp4" type="video/mp4">
+        </video>
+        <h3>csgo better than cs2</h3>
+        <p>originally didnt know gh pages implemented their own 404</p>
+        <h3><a href="/portfolio/">back to home</a></h3>
+    </main>
+</body>
 </html>
