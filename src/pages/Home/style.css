@@ -133,6 +133,41 @@
     transition: color var(--transition-time) ease;
 }
 
+.contribution-calendar {
+    overflow-x: auto;
+}
+
+.contribution-calendar {
+    min-height: 140px;
+    color: var(--text);
+    font-family: "JetBrainsMono";
+    transition: color var(--transition-time) ease;
+}
+
+.contribution-calendar text {
+    fill: var(--text);
+    transition: fill var(--transition-time) ease;
+}
+
+.contribution-calendar rect {
+    transition: fill var(--transition-time) ease;
+}
+
+.contribution-tooltip {
+    position: fixed;
+    z-index: 2000;
+    width: max-content;
+    max-width: calc(100vw - 20px);
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: var(--text);
+    color: var(--bg);
+    font-family: "JetBrainsMono";
+    font-size: 12px;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+}
+
 .custom-divider-bottom {
     border-bottom: 1px solid;
     border-color: var(--secondary);

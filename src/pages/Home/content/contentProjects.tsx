@@ -6,14 +6,94 @@ import s4shadowplay from '../../../assets/images/s4-shadowplay.png'
 import db1 from '../../../assets/images/db1.png'
 import db2 from '../../../assets/images/db2.png'
 import { setMeta } from '../../../utils/setmeta';
+import { cloneElement } from 'preact';
+import { useState } from 'preact/hooks';
+import { GitHubCalendar, type Activity } from 'react-github-calendar';
+
+function contributionLabel(activity: Activity) {
+    const contributions = activity.count === 1
+        ? '1 contribution'
+        : `${activity.count} contributions`;
+    return `${contributions} on ${activity.date}`;
+}
 
 export default function ContentProjects() {
 
     setMeta("projects", "projects page of things i've worked on");
 
+    const [tooltip, setTooltip] = useState<{
+        text: string;
+        x: number;
+        y: number;
+    } | null>(null);
+
     return (
 
         <div class="description-all">
+
+            <div class="custom-header">
+                Contribution history
+            </div>
+
+            <div class="contribution-calendar custom-divider-bottom">
+                {tooltip && (
+                    <div
+                        class="contribution-tooltip"
+                        role="tooltip"
+                        style={{ left: tooltip.x, top: tooltip.y }}
+                    >
+                        {tooltip.text}
+                    </div>
+                )}
+                <GitHubCalendar
+                    username="denialpan"
+                    blockMargin={3}
+                    blockRadius={2}
+                    blockSize={11}
+                    errorMessage="Unable to load GitHub contribution data."
+                    fontSize={12}
+                    renderBlock={(block, activity) => cloneElement(block, {
+                        'aria-label': contributionLabel(activity),
+                        onBlur: () => setTooltip(null),
+                        onFocus: event => {
+                            const bounds = event.currentTarget.getBoundingClientRect();
+                            setTooltip({
+                                text: contributionLabel(activity),
+                                x: bounds.left + bounds.width / 2,
+                                y: bounds.top - 8,
+                            });
+                        },
+                        onMouseEnter: event => setTooltip({
+                            text: contributionLabel(activity),
+                            x: event.clientX,
+                            y: event.clientY - 12,
+                        }),
+                        onMouseLeave: () => setTooltip(null),
+                        onMouseMove: event => setTooltip({
+                            text: contributionLabel(activity),
+                            x: event.clientX,
+                            y: event.clientY - 12,
+                        }),
+                        tabIndex: 0,
+                    })}
+                    theme={{
+                        light: [
+                            'var(--tertiary)',
+                            'color-mix(in srgb, var(--accent) 25%, var(--bg))',
+                            'color-mix(in srgb, var(--accent) 50%, var(--bg))',
+                            'color-mix(in srgb, var(--accent) 75%, var(--bg))',
+                            'var(--accent)',
+                        ],
+                        dark: [
+                            'var(--tertiary)',
+                            'color-mix(in srgb, var(--accent) 25%, var(--bg))',
+                            'color-mix(in srgb, var(--accent) 50%, var(--bg))',
+                            'color-mix(in srgb, var(--accent) 75%, var(--bg))',
+                            'var(--accent)',
+                        ],
+                    }}
+                />
+            </div>
 
             <div class="description-text custom-divider-bottom">
                 Here is a list of projects that I have completed, or am currently working on. 

@@ -16,6 +16,7 @@
         "preact-iso": "^2.10.0",
         "preact-render-to-string": "^6.6.1",
         "preact-router": "^4.1.2",
+        "react-github-calendar": "^5.0.6",
         "wouter-preact": "^3.7.1",
         "yaml": "^2.8.1"
     },
