@@ -35,7 +35,11 @@ export default function ContentProjects() {
                 Contribution history
             </div>
 
-            <div class="contribution-calendar custom-divider-bottom">
+            <div 
+                class="contribution-calendar custom-divider-bottom" 
+                onClick={() => window.open("https://github.com/denialpan", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}
+            >
+                
                 {tooltip && (
                     <div
                         class="contribution-tooltip"
@@ -93,10 +97,6 @@ export default function ContentProjects() {
                         ],
                     }}
                 />
-            </div>
-
-            <div class="description-text custom-divider-bottom">
-                Here is a list of projects that I have completed, or am currently working on. 
             </div>
 
             <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dankeyboard", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
