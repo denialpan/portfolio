@@ -127,6 +127,20 @@
     font-size: 20px;
 }
 
+.project-link {
+    width: fit-content;
+    text-decoration: none;
+}
+
+.project-section {
+    scale: 1;
+    transition: scale var(--transition-time) ease;
+}
+
+.project-section:hover {
+    scale: 0.98;
+}
+
 .custom-caption {
     color: var(--text);
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
