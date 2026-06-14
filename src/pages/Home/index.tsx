@@ -100,6 +100,10 @@ export function Home() {
                         <Route path="/about">
                             <ContentAbout />
                         </Route>
+                        <Route path="/projects/:slug">
+                            <ContentProjects />
+                        </Route>
+
                         <Route path="/projects">
                             <ContentProjects />
                         </Route>

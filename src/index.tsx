@@ -29,6 +29,7 @@ export function App() {
                     <Route path="/" component={Portfolio} />
                     <Route path="/about" component={Portfolio} />
                     <Route path="/projects" component={Portfolio} />
+                    <Route path="/projects/:slug" component={Portfolio} />
                     <Route path="/random" component={Portfolio} />
                     <Route path="/random/:slug" component={Portfolio} />
                     <Route component={NotFound} />
