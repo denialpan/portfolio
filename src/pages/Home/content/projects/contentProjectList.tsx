@@ -100,11 +100,11 @@ export default function ProjectList() {
                 />
             </div>
 
-            <div class="project-section" onClick={() => window.open("https://github.com/denialpan/dankeyboard", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
-                <div class="custom-header">
-                    dankeyboard
-                </div>
 
+            <div class="custom-header">
+                dankeyboard
+            </div>
+            <div onClick={() => window.open("https://github.com/denialpan/dankeyboard", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
                 <img src={dankeyboard} alt="dankeyboard" width={720} />
 
                 <div class="custom-caption custom-divider-bottom">
