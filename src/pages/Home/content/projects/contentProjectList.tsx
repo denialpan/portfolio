@@ -5,6 +5,7 @@ import danverter1 from '../../../../assets/images/danverter1.png';
 import s4shadowplay from '../../../../assets/images/s4-shadowplay.png'
 import db1 from '../../../../assets/images/db1.png'
 import db2 from '../../../../assets/images/db2.png'
+import leesinurf from '../../../../assets/images/leesinURFpreview.png'
 import { setMeta } from '../../../../utils/setmeta';
 import { cloneElement } from 'preact';
 import { useState } from 'preact/hooks';
@@ -100,8 +101,24 @@ export default function ProjectList() {
                 />
             </div>
 
+            <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dankeyboard", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
+                Lee Sin URF frame analysis/translation
+            </div>
+            <div onClick={() => window.open("https://github.com/denialpan/leesin-URF-analysis-translation", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
+                <img src={leesinurf} alt="lee sin urf workflow" width={720} />
 
-            <div class="custom-header">
+                <div class="custom-caption custom-divider-bottom">
+                    custom frame analysis workflow with Chinese transcription and translation to English
+                    <ul>
+                        <li>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dankeyboard", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
                 dankeyboard
             </div>
             <div onClick={() => window.open("https://github.com/denialpan/dankeyboard", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
@@ -119,8 +136,6 @@ export default function ProjectList() {
                     </ul>
                 </div>
             </div>
-
-
 
             <Link
                 class="custom-header project-link"
