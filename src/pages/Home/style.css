@@ -281,6 +281,13 @@
 
 .markdown .project-code-container pre {
     margin-inline: 15px;
+    text-align: left;
+}
+
+.markdown .project-code-container code {
+    display: block;
+    text-align: left;
+    white-space: pre;
 }
 
 .markdown .project-code-container figcaption,

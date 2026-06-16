@@ -31,7 +31,7 @@ export default function LeeSinURF() {
             </p>
 
             <p>
-                While their streams are mainly on the Chinese platform BiliBili and are occasionally restricted without Chinese credentials, their streams have been archived and shared on these Youtube channels, <a href="https://www.youtube.com/@LoLChallengerCN">LoL Challenger CN</a> and <a href="https://www.youtube.com/@LoLMontageCN">LoL Montage CN</a>. From these two channels, a total of 22 different full URF games across different points of the game's lifespan and updates can be used, amounting to over 2+ hours of content to sift through and understand.
+                While their streams are mainly on the Chinese platform BiliBili and are occasionally restricted without Chinese credentials, their streams have been archived and shared on these Youtube channels, <a href="https://www.youtube.com/@LoLChallengerCN">LoL Challenger CN</a> and <a href="https://www.youtube.com/@LoLMontageCN">LoL Montage CN</a>. From these two channels, a total of 22 different full URF games across different points of the game's lifespan and updates can be used, amounting to over 5+ hours of content to sift through and understand.
             </p>
 
             <h1>
@@ -79,12 +79,69 @@ export default function LeeSinURF() {
                 </li>
             </ol>
             <p>
-                This is certainly a good start to see the baseline translation. Here is an example of an output translation on a first run:
+                This is certainly seems to be a good start to see the baseline translation. Here is an example of an output translation the first few runs:
             </p>
 
-            <ProjectCodeBlock caption="Example model repository used as part of the translation pipeline.">
-                text
+            <ProjectCodeBlock
+                caption={
+                    <>
+                        direct translation: <a href="https://www.youtube.com/watch?v=mI9iNnk4CCk&t=783s" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=mI9iNnk4CCk&t=783s</a>
+                    </>
+                }
+            >
+                {`
+                cue 146 784.600s-787.020s confidence 0.83
+                Chinese: 推推棒先秒他再砸你把
+                English: Push him down first, then hit you with the push stick.
+                `}
             </ProjectCodeBlock>
+            <p>
+                While the translation itself is "reasonably" correct, the crucial point of the actual context for the game is horribly lost, even when the confidence score of detection and translation is high; when comparing the actual English translation to the gameplay, they no longer coincide very well. As such, it is important to add an additional step towards the translation process, where a brief run of general video context is introduced, rather than just audio translation and a "league of legends" terminology guide for the LLM.
+            </p>
+            <p>
+                Running video data through another LLM is a bit troublesome. Originally the text translation was run through Qwen2.5-vl 14b, however due to the dense usage of taking a video frame and transforming them into tokens, it is important to limit to a lower parameter model, such as Qwen2.5-vl 7b, especially when run on consumer hardware. Time suddenly becomes a huge factor here as well, but if hardware limitations were not a problem, it most certainly would be remediated away instantly, as would other major computating problems. Here is the contextual translation at the same timeframe:
+            </p>
+            <ProjectCodeBlock
+                caption={
+                    <>
+                        contextual translation: <a href="https://www.youtube.com/watch?v=mI9iNnk4CCk&t=783s" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=mI9iNnk4CCk&t=783s</a>
+                    </>
+                }
+            >
+                {`
+                cue 146 784.600s-787.020s confidence 0.93
+                Chinese: 推推棒先秒他再砸你吧
+                English: Use Rocketbelt to kill him down first, then hit you.
+                `}
+            </ProjectCodeBlock>
+            <p>
+                Even with such a low parameter model, it is able to garner such small details. Primarily, the impressive part is being able to extract the "Rocketbelt" keyword, as it is a League of Legends specific item term, yet if interpreted literally in audio translation, even for native speakers, it is more close to "push-pull". While effectively the meaning is correct from the audio standpoint, providing general video context greatly improved the contextual translation to discern the actual gameplay within the frame time range, interpret the "push-pull" to be in relation to a specific item movement, then extract the likely item in question. Of course, this is done at the unfortunate cost of time and computing power, but overall still very impressive.
+            </p>
+            <h3>
+                Statistical downsides
+            </h3>
+            <p>
+                With this method of translation, it's possible to get pretty accurate results, with some instances where texts need to be manually adjusted. The cost of this accurate contextual translation, unfortunately, is time and energy. With the current hardware this project is performed on (RTX 2070 Super, Ryzen 7 3700X, 64GB DDR4), it on average takes 2 minutes to contextualize one subtitle cue that spans about 3 seconds of video time.
+            </p>
+
+            <p>
+                Factoring in the amount of content and subtitle cue points where translation is contextualized, for about 5 hours of content, we can calculate:
+            </p>
+            <ul>
+                <li>
+                    2 minutes on average per subtitle cue
+                </li>
+                <li>
+                    Each video conservatively averages about 150 subtitle cues
+                </li>
+                <li>
+                    There are 22 videos to go through
+                </li>
+            </ul>
+            <p>
+                This becomes 110 hours to computationally translate existing transcripted Chinese text into English and briefly analyzing League of Legends gameplay. This does not take into account of the time needed to filter the audio, transcribe, and create the SRT output that the translation process would begin to use, as well as manual translation fixes.
+            </p>
+
 
         </ProjectArticle>
     );

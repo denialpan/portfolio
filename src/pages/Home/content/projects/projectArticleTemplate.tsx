@@ -39,11 +39,23 @@ type ProjectCodeBlockProps = {
     children: ComponentChildren;
 };
 
+function formatCodeBlock(children: ComponentChildren) {
+    if (typeof children !== 'string') return children;
+
+    const lines = children.replace(/^\r?\n|\r?\n\s*$/g, '').split(/\r?\n/);
+    const indents = lines
+        .filter(line => line.trim())
+        .map(line => line.match(/^\s*/)?.[0].length ?? 0);
+    const trimBy = indents.length ? Math.min(...indents) : 0;
+
+    return lines.map(line => line.slice(trimBy)).join('\n');
+}
+
 export function ProjectCodeBlock({ caption, children }: ProjectCodeBlockProps) {
     return (
         <div class="project-code-container">
             <pre>
-                <code>{children}</code>
+                <code>{formatCodeBlock(children)}</code>
             </pre>
             {caption && <figcaption>{caption}</figcaption>}
         </div>
