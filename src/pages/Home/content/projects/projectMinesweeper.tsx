@@ -1,18 +1,16 @@
-import { Link } from 'wouter-preact';
-import { setMeta } from '../../../../utils/setmeta';
+import ProjectArticle from './projectArticleTemplate';
 
-export default function LeeSinURF() {
-    setMeta('minesweeper', 'test project detail page');
-
+export default function MinesweeperProject() {
     return (
-        <section class="description-all">
-            <div class="custom-header">Minesweeper</div>
-            <div class="description-text custom-divider-bottom">
+        <ProjectArticle
+            title="Minesweeper"
+            description="Test project detail page."
+            date="2026-06-16"
+        >
+            <h2>Overview</h2>
+            <p>
                 Test project page.
-            </div>
-            <Link class="random-footer" href="/projects">
-                Back to Projects
-            </Link>
-        </section>
+            </p>
+        </ProjectArticle>
     );
 }

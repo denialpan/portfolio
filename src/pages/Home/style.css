@@ -275,6 +275,21 @@
     overflow-x: auto;
 }
 
+.markdown .project-code-container {
+    margin: 0;
+}
+
+.markdown .project-code-container pre {
+    margin-inline: 15px;
+}
+
+.markdown .project-code-container figcaption,
+.markdown .project-figure-container figcaption {
+    font-style: italic;
+    color: var(--secondary);
+    text-align: center;
+}
+
 .markdown video {
     width: 100%;
     max-width: 560px;
