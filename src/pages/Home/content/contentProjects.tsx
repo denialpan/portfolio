@@ -1,6 +1,7 @@
 import { useRoute } from 'wouter-preact';
 import { NotFound } from '../../404';
 import MinesweeperProject from './projects/projectMinesweeper';
+import LeeSinURF from './projects/projectLeeSinURF';
 import ProjectList from './projects/contentProjectList';
 
 export default function ContentProjects() {
@@ -12,6 +13,10 @@ export default function ContentProjects() {
 
     if (params.slug === 'minesweeper') {
         return <MinesweeperProject />;
+    }
+
+    if (params.slug === 'leesinurf') {
+        return <LeeSinURF />;
     }
 
     return <NotFound />;

@@ -21,7 +21,7 @@ function Portfolio() {
     );
 }
 
-const projectRoute = /^\/projects\/(minesweeper)\/?$/;
+const projectRoute = /^\/projects\/(minesweeper|leesinurf)\/?$/;
 const randomRoute = /^\/random\/(csgoanddesubticking|essentialprograms|preservation|test)\/?$/;
 
 export function App() {
