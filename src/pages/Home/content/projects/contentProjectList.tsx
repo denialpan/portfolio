@@ -101,20 +101,37 @@ export default function ProjectList() {
                 />
             </div>
 
-            <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dankeyboard", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
-                Lee Sin URF frame analysis/translation
-            </div>
-            <div onClick={() => window.open("https://github.com/denialpan/leesin-URF-analysis-translation", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
+            <Link class="custom-header project-link" href="/projects/leesinurf">
+                complex video analysis and audio translation
+            </Link>
+            <div>
                 <img src={leesinurf} alt="lee sin urf workflow" width={720} />
-
-                <div class="custom-caption custom-divider-bottom">
-                    custom frame analysis workflow with Chinese transcription and translation to English
+                <div class="custom-caption">
+                    a custom League of Legends video and audio tool pipeline to analyze sophisticated niche gameplay, and further translate casual Chinese commentary to English 
                     <ul>
                         <li>
+                            <b>OpenCV</b> - frame region extraction and icon recognition within a video
                         </li>
                         <li>
+                            <b>Whisper large-v3</b> - language transcription
+                        </li>
+                        <li>
+                            <b>UVR</b> - vocal isolation in noisy contexts
+                        </li>
+                        <li>
+                            <b>Qwen2.5-VL 14B</b> - Chinese to English translation 
+                        </li>
+                        <li>
+                            <b>Qwen2.5-VL 7B</b> - visual analysis of broad gameplay frames
+                        </li>
+                        <li>
+                            <b>Davinci Resolve</b> - multitrack video editing and SRT subtitle creation
                         </li>
                     </ul>
+                </div>
+
+                <div class="custom-divider-bottom">
+
                 </div>
             </div>
 
@@ -137,10 +154,7 @@ export default function ProjectList() {
                 </div>
             </div>
 
-            <Link
-                class="custom-header project-link"
-                href="/projects/minesweeper"
-            >
+            <Link class="custom-header project-link" href="/projects/minesweeper">
                 dansweeper
             </Link>
             <video

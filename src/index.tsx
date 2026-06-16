@@ -21,6 +21,9 @@ function Portfolio() {
     );
 }
 
+const projectRoute = /^\/projects\/(minesweeper)\/?$/;
+const randomRoute = /^\/random\/(csgoanddesubticking|essentialprograms|preservation|test)\/?$/;
+
 export function App() {
     return (
         <main>
@@ -29,9 +32,9 @@ export function App() {
                     <Route path="/" component={Portfolio} />
                     <Route path="/about" component={Portfolio} />
                     <Route path="/projects" component={Portfolio} />
-                    <Route path="/projects/:slug" component={Portfolio} />
+                    <Route path={projectRoute} component={Portfolio} />
                     <Route path="/random" component={Portfolio} />
-                    <Route path="/random/:slug" component={Portfolio} />
+                    <Route path={randomRoute} component={Portfolio} />
                     <Route component={NotFound} />
                 </Switch>
             </Router>
