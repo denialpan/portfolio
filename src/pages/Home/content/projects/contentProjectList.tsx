@@ -154,9 +154,9 @@ export default function ProjectList() {
                 </div>
             </div>
 
-            <Link class="custom-header project-link" href="/projects/minesweeper">
-                dansweeper
-            </Link>
+            <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dansweeper-ml", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
+                dansweeper-ml
+            </div>
             <video
                 autoplay
                 loop

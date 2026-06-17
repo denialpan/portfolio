@@ -11,9 +11,9 @@ export default function ContentProjects() {
         return <ProjectList />;
     }
 
-    if (params.slug === 'minesweeper') {
-        return <MinesweeperProject />;
-    }
+    // if (params.slug === 'minesweeper') {
+    //     return <MinesweeperProject />;
+    // }
 
     if (params.slug === 'leesinurf') {
         return <LeeSinURF />;
