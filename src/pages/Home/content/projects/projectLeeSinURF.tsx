@@ -7,7 +7,11 @@ export default function LeeSinURF() {
     return (
         <ProjectArticle
             title="Lee Sin URF video analysis"
-            description="Video analysis pipeline to dissect League of Legends gameplay."
+            description={
+                <>
+                Video analysis pipeline to dissect League of Legends gameplay. Primary tools used were <a href="https://www.python.org/downloads/">Python 3</a>, <a href="https://github.com/opencv/opencv">OpenCV</a>, <a href="https://github.com/m-bain/whisperx">WhisperX</a>, and various <a href="https://github.com/QwenLM/Qwen">Qwen</a> LLMs
+                </>
+            }
             date="6/16/2026"
         >
             <h1>Overview</h1>

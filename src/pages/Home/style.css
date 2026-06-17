@@ -121,6 +121,11 @@
     font-size: 16px;
 }
 
+.project-description a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
 .custom-header {
     color: var(--accent);
     font-family: "JetBrainsMono";

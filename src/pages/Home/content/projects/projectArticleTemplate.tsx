@@ -4,18 +4,19 @@ import { setMeta } from '../../../../utils/setmeta';
 
 type ProjectArticleProps = {
     title: string;
-    description: string;
+    description: ComponentChildren;
+    metaDescription?: string;
     date?: string;
     children: ComponentChildren;
 };
 
-export default function ProjectArticle({ title, description, date, children }: ProjectArticleProps) {
-    setMeta(title, description);
+export default function ProjectArticle({ title, description, metaDescription, date, children }: ProjectArticleProps) {
+    setMeta(title, metaDescription || (typeof description === 'string' ? description : title));
 
     return (
         <article>
             <div class="custom-header">{title}</div>
-            <p class="description-text" style={{ margin: 0 }}>
+            <p class="description-text project-description" style={{ margin: 0 }}>
                 {description}
             </p>
             <div class="custom-divider-bottom">
