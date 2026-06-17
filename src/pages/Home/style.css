@@ -297,6 +297,10 @@
     text-align: center;
 }
 
+.markdown .project-figure-container img {
+    max-width: 100%;
+}
+
 .markdown video {
     width: 100%;
     max-width: 560px;

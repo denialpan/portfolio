@@ -1,4 +1,7 @@
 import ProjectArticle, { ProjectCodeBlock } from './projectArticleTemplate';
+import { ProjectFigure } from './projectArticleTemplate';
+import leesinhudannotator from '../../../../assets/images/leesinhudannotator.png';
+import leesinmanualpreview from '../../../../assets/video/leesinmanualpreview.mp4';
 
 export default function LeeSinURF() {
     return (
@@ -121,6 +124,15 @@ export default function LeeSinURF() {
                 Statistical downsides
             </h3>
             <p>
+                As mentioned before, there are instances of needing to manually fix some translations that are incorrect, or adjust the overall tonage to a more appropriate English connotation. While not difficult at all, it often requires running the process again with manually specified frame ranges, waiting for 2 minutes for the subtitle cue translation, then entering the subtitle: 
+            </p>
+            <ProjectFigure caption="quick demonstration of manual translation and detection fixes">
+                <video controls>
+                    <source src={leesinmanualpreview} type="video/mp4"></source>
+                </video>
+            </ProjectFigure>
+
+            <p>
                 With this method of translation, it's possible to get pretty accurate results, with some instances where texts need to be manually adjusted. The cost of this accurate contextual translation, unfortunately, is time and energy. With the current hardware this project is performed on (RTX 2070 Super, Ryzen 7 3700X, 64GB DDR4), it on average takes 2 minutes to contextualize one subtitle cue that spans about 3 seconds of video time.
             </p>
 
@@ -129,20 +141,88 @@ export default function LeeSinURF() {
             </p>
             <ul>
                 <li>
-                    2 minutes on average per subtitle cue
+                    2 minutes on average per subtitle cue.
                 </li>
                 <li>
-                    Each video conservatively averages about 150 subtitle cues
+                    Each video conservatively averages about 150 subtitle cues.
                 </li>
                 <li>
-                    There are 22 videos to go through
+                    There are 22 videos to go through.
                 </li>
             </ul>
             <p>
                 This becomes 110 hours to computationally translate existing transcripted Chinese text into English and briefly analyzing League of Legends gameplay. This does not take into account of the time needed to filter the audio, transcribe, and create the SRT output that the translation process would begin to use, as well as manual translation fixes.
             </p>
 
+            <h2>
+                Keystroke and Movement Counter
+            </h2>
+            <p>
+                In the URF gamemode, mechanically skilled players can implement combos at an extremely fast pace, along with a wide range of movement options available. In an attempt to follow this, the goal is to visually display the keystrokes used, and the number of movement options are possible.
+            </p>
+            <p>
+                From the visuals alone, the most consistent and informative source to gather this data from is from the HUD at the bottom of all the videos. From HUD data alone, it's possible to get the exact frame when abiities are inputted, items are used, thus also creating a total of the possible movement options. Fortunately, <a href="https://space.bilibili.com/470840543">Nanshen</a> has played the game with consistent settings across many years, so the method of extracting the frame data can be discerned from just one video, then applied across the remaining 21.
+            </p>
+            <p>
+                Even so, manual image data still needs to be collected, as well as utilizing some image recognition. Across the millions of individual frame data to analyze for precise, the ideal procedure would be specify known guarentees of HUD states, then apply the same logic and conditionals for all general HUD states. This can be done by:
+            </p>
+            <ol>
+                <li>
+                    Annotating the regions of relevant HUD state changes.
+                </li>
+                <li>
+                    Extracting the image data in said regions and labelling its state.
+                </li>
+                <li>
+                    Training an image classification model on an OpenCV preprocessed dataset.
+                </li>
+                <li>
+                    Run all footage through the image classification model to extract HUD state timeframes.
+                </li>
+            </ol>
+            <ProjectFigure caption="region annotator quickly built with Tkinter. keyboard shortcuts allow very quick labelling.">
+                <img src={leesinhudannotator} alt="a simple hud annotator" />
+            </ProjectFigure>
+            <p>
+                With hud data documented in their respective intervals, it becomes much simpler to take each region and determine the most recent keystrokes and available movement options at any point in time of the video. 
+            </p>
+            <ProjectCodeBlock caption="counters and state transitions are not all the same, for example, Q and W abilities">
+                {`
+                // extreme simplification
+                // pseudo state movement counter example
+                if (Q == "recast") ? 1 : 0
+                if (W == "ready") ? 1 : 0
 
+                // pseudo state transition example
+                if Q:
+                    if ("ready" -> "recast"):
+                        return Q1
+                    else if ("recast" -> "cooldown"):
+                        return Q2
+                `}
+            </ProjectCodeBlock>
+            <p>
+                Gathering the data is somewhat trivial with the right tools. A fairly robust custom built tool allows the easy collection of data by randomly determining a few hundred region states. While this is sounds menial, it pales in comparison the millions that would need to be done manually. Furthermore, with this state event system, determining the logical conditions of state transitions allows frame perfect precision with little effort.
+            </p>
+            <p>
+                The processing of 5+ hours of final video data off of the eventually trained OpenCV image classification model would take roughly 3.5 hours in total. If accounting as well for the 30 minutes to manually label each region and specify example region states, <b>the resulting rough 4 hours to process everything would still be shorter than the time it would take to even watch all the 5+ hours of footage in real time.</b>
+            </p>
+
+            <h1>
+                Final Compilation
+            </h1>
+            <p>
+                A goal of this small research project in such a niche topic is to summarize and display relevant information in an informative and inobtrusive way. This does not tie so much into statistics and in-depth numbers, such as "average keystrokes a game" or "airborne mechanics", as 22 games that can be played healthily within about 6 days is not nearly enough data to come up with an accurate number, not accounting for other game composition anomalies, such as basic team deviations.
+            </p>
+            <p>
+                Presenting the data should be informative for beginner's to learn the champion, but not to detract the viewer's attention away from the main spectacle; the gameplay is very impressive and satisfying to view, and in its raw nature, it should stay that way. Furthermore, the final results do serve as a method of archival: <a href="https://space.bilibili.com/470840543">Nanshen</a> unfortunately has largely retired from playing the game and streaming, and there are few other archived sources of his gameplay accessible to the world. 
+            </p>
+            <p>
+                As such, to properly contribute to the data footage in a meaningful way, keystroke history and movement counter are embedded within the video off to the side with minimalistic transitions. This data is displayed by creating <a href="https://support.apple.com/en-us/102207">ProRes 4444</a> file formats with transparency that will be overlayed on the original sources in Davinci Resolve. Subtitles are also edited and verified with Davinci Resolve to ensure that they are properly aligned and timed. 
+            </p>
+            <p>
+                If a Youtube video is not presently linked here, it means that the video is still be worked on, mostly verifying that translation is correct and does not disrespect the original commentator. Check back later. 
+            </p>
         </ProjectArticle>
     );
 }
