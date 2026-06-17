@@ -37,7 +37,7 @@
     <script>
         (function () {
             var route = window.location.pathname.replace(/^\/portfolio\/?/, '/');
-            var appRoute = /^\/(?:about|projects|random(?:\/[^/]+)?)\/?$/.test(route);
+            var appRoute = /^\/(?:about|projects(?:\/(?:minesweeper|leesinurf))?|random(?:\/(?:csgoanddesubticking|essentialprograms|preservation|test))?)\/?$/.test(route);
 
             if (appRoute) {
                 sessionStorage.setItem(
