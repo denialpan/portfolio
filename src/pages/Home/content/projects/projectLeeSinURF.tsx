@@ -137,11 +137,11 @@ export default function LeeSinURF() {
             </ProjectFigure>
 
             <p>
-                With this method of translation, it's possible to get pretty accurate results, with some instances where texts need to be manually adjusted. The cost of this accurate contextual translation, unfortunately, is time and energy. With the current hardware this project is performed on (RTX 2070 Super, Ryzen 7 3700X, 64GB DDR4), it on average takes 2 minutes to contextualize one subtitle cue that spans about 3 seconds of video time.
+                With this method of automated translation, it's possible to get pretty accurate results, with some instances where texts need to be manually adjusted. The cost of this accurate contextual translation, unfortunately, is time and energy. With the current hardware this project is performed on (RTX 2070 Super, Ryzen 7 3700X, 64GB DDR4), it on average takes 2 minutes to contextualize one subtitle cue that spans about 3 seconds of video time.
             </p>
 
             <p>
-                Factoring in the amount of content and subtitle cue points where translation is contextualized, for about 5 hours of content, we can calculate:
+                Factoring in the amount of content and subtitle cues, for about 5 hours of content, we can calculate:
             </p>
             <ul>
                 <li>
@@ -226,6 +226,9 @@ export default function LeeSinURF() {
             </p>
             <p>
                 If a Youtube video is not presently linked here, it means that the video is still be worked on, mostly verifying that translation is correct and does not disrespect the original commentator. Check back later. 
+            </p>
+            <p>
+                You may check the project's source code <a href="https://github.com/denialpan/leesin-URF-analysis-translation">here</a>.
             </p>
         </ProjectArticle>
     );
