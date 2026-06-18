@@ -30,10 +30,10 @@ export default function ContentHome() {
                                 <b>UVR</b> - vocal isolation in noisy contexts
                             </li>
                             <li>
-                                <b>Qwen2.5-VL 14B</b> - Chinese to English translation
+                                <b>Qwen2.5:14b</b> - Chinese to English translation
                             </li>
                             <li>
-                                <b>Qwen2.5-VL 7B</b> - visual analysis of broad gameplay frames
+                                <b>Qwen2.5vl:7b</b> - visual analysis of broad gameplay frames
                             </li>
                             <li>
                                 <b>Davinci Resolve</b> - multitrack video editing and SRT subtitle creation
