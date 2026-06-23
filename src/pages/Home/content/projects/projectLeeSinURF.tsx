@@ -225,10 +225,13 @@ export default function LeeSinURF() {
                 As such, to properly contribute to the data footage in a meaningful way, keystroke history and movement counter are embedded within the video off to the side with minimalistic transitions. This data is displayed by creating <a href="https://support.apple.com/en-us/102207">ProRes 4444</a> file formats with transparency that will be overlayed on the original sources in Davinci Resolve. Subtitles are also edited and verified with Davinci Resolve to ensure that they are properly aligned and timed. 
             </p>
             <p>
-                If a Youtube video is not presently linked here, it means that the video is still be worked on, mostly verifying that translation is correct and does not disrespect the original commentator. Check back later. 
+                If a full Youtube video is not presently linked here, it means that the video is still be worked on, mostly verifying that translation is correct and does not disrespect the original commentator. You may check the example two gameplay demonstrations of the content expected soon.
             </p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7I1_SNA_TK0?si=PlCgJcw55Hholh8p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
             <p>
-                You may check the project's source code <a href="https://github.com/denialpan/leesin-URF-analysis-translation">here</a>.
+                <a href="https://github.com/denialpan/leesin-URF-analysis-translation">Source code.</a>.
             </p>
         </ProjectArticle>
     );
