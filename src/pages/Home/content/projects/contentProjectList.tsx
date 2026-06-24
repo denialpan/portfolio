@@ -282,7 +282,7 @@ export default function ProjectList() {
 
                     </li>
                     <li>
-                        <a href="https://denialpan.github.io/portfolio-old-1/" target="_blank" rel="noreferrer"> first old portfolio from maybe 2021 - 2022 i think</a>
+                        <a href="https://denialpan.github.io/portfolio-old-1/" target="_blank" rel="noreferrer"> first old portfolio from maybe 2021 - 2022</a>
                     </li>
                 </ul>
 
