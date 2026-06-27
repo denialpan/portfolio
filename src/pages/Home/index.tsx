@@ -81,7 +81,7 @@ export function Home() {
                         <Link href="/random">Random</Link>
                     </div>
                     <div class="resume-main"
-                         onClick={() => window.open("https://raw.githubusercontent.com/denialpan/portfolio/bebef3a243fc45565cb2916e9a0305cde8b42274/src/assets/Daniel%20Pan%20-%20Resume.pdf", "_blank", "noopener,noreferrer")}>
+                         onClick={() => window.open("https://raw.githubusercontent.com/denialpan/portfolio/d450bb0f52b3eb0d5ed0c46f231beaf83c836034/src/assets/Daniel%20Pan%20-%20Resume.pdf", "_blank", "noopener,noreferrer")}>
                         RESUME
                     </div>
                 </nav>
