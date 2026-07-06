@@ -50,9 +50,6 @@ export function Home() {
                                                      rel="noopener noreferrer"
                                                      style={{textDecoration: "none", color: "var(--accent)"}}>GT</a>
                     </div>
-                    <div>
-                        React, C++, Python, Java
-                    </div>
                     <div class="shift-gradient-animation" style={{color: "var(--secondary)"}}>
                         digitally preserving myself
                     </div>
