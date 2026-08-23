@@ -231,7 +231,7 @@ export default function LeeSinURF() {
             <iframe width="560" height="315" src="https://www.youtube.com/embed/7I1_SNA_TK0?si=PlCgJcw55Hholh8p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             <p>
-                <a href="https://github.com/denialpan/leesin-URF-analysis-translation">Source code.</a>.
+                <a href="https://github.com/denialpan/leesin-URF-analysis-translation">Source code</a>.
             </p>
         </ProjectArticle>
     );

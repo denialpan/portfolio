@@ -1,16 +1,61 @@
 import minedemo from '../../../../assets/video/minedemov2.mp4';
 import dankeyboard from '../../../../assets/images/dankeyboard.png';
 import danverter from '../../../../assets/images/danverter.png';
-import danverter1 from '../../../../assets/images/danverter1.png';
 import s4shadowplay from '../../../../assets/images/s4-shadowplay.png'
 import db1 from '../../../../assets/images/db1.png'
-import db2 from '../../../../assets/images/db2.png'
 import leesinurf from '../../../../assets/images/leesinURFpreview.png'
 import { setMeta } from '../../../../utils/setmeta';
-import { cloneElement } from 'preact';
+import { cloneElement, type ComponentChildren } from 'preact';
 import { useState } from 'preact/hooks';
 import { GitHubCalendar, type Activity } from 'react-github-calendar';
 import { Link } from 'wouter-preact';
+
+type ProjectCardProps = {
+    title: string;
+    description: ComponentChildren;
+    image: ComponentChildren;
+    detailsHref?: string;
+    externalHref?: string;
+    githubHref?: string;
+};
+
+function ProjectCard({
+    title,
+    description,
+    image,
+    detailsHref,
+    externalHref,
+    githubHref,
+}: ProjectCardProps) {
+    return (
+        <article class="project-card">
+            <div class="project-card-media">
+                {image}
+            </div>
+
+            <div class="project-card-content">
+                <div class="custom-header">{title}</div>
+                <div class="project-card-description">{description}</div>
+
+                {(detailsHref || externalHref || githubHref) && (
+                    <div class="project-card-actions">
+                        {detailsHref && <Link href={detailsHref}>Details</Link>}
+                        {externalHref && (
+                            <a href={externalHref} target="_blank" rel="noreferrer">
+                                View
+                            </a>
+                        )}
+                        {githubHref && (
+                            <a href={githubHref} target="_blank" rel="noreferrer">
+                                GitHub
+                            </a>
+                        )}
+                    </div>
+                )}
+            </div>
+        </article>
+    );
+}
 
 function contributionLabel(activity: Activity) {
     const contributions = activity.count === 1
@@ -101,191 +146,83 @@ export default function ProjectList() {
                 />
             </div>
 
-            <Link class="custom-header project-link" href="/projects/leesinurf">
-                complex video analysis and audio translation
-            </Link>
-            <div>
-                <img src={leesinurf} alt="lee sin urf workflow" width={720} />
-                <div class="custom-caption">
-                    a custom League of Legends video and audio tool pipeline to analyze sophisticated niche gameplay, and further translate casual Chinese commentary to English 
-                    <ul>
-                        <li>
-                            <b>OpenCV</b> - frame region extraction and icon recognition within a video
-                        </li>
-                        <li>
-                            <b>Whisper large-v3</b> - language transcription
-                        </li>
-                        <li>
-                            <b>UVR</b> - vocal isolation in noisy contexts
-                        </li>
-                        <li>
-                            <b>Qwen2.5:14b</b> - Chinese to English translation 
-                        </li>
-                        <li>
-                            <b>Qwen2.5vl:7b</b> - visual analysis of broad gameplay frames
-                        </li>
-                        <li>
-                            <b>Davinci Resolve</b> - multitrack video editing and SRT subtitle creation
-                        </li>
-                    </ul>
-                </div>
+            <div class="project-card-list">
+                <ProjectCard
+                    title="complex video analysis and audio translation"
+                    githubHref="https://github.com/denialpan/leesin-URF-analysis-translation"
+                    detailsHref="/projects/leesinurf"
+                    image={<img src={leesinurf} alt="lee sin urf workflow" />}
+                    description={(
+                        <>
+                            a custom League of Legends video and audio tool pipeline to analyze sophisticated niche gameplay, and further translate casual Chinese commentary to English
 
-                <div class="custom-divider-bottom">
+                        </>
+                    )}
+                />
 
-                </div>
-            </div>
+                <ProjectCard
+                    title="dankeyboard"
+                    githubHref="https://github.com/denialpan/dankeyboard"
+                    image={<img src={dankeyboard} alt="dankeyboard heatmap interface" />}
+                    description={(
+                        <>
+                            keyboard and mouse tracking with a custom heatmap graph of keyboard, mouse, and monitor
 
-            <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dankeyboard", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
-                dankeyboard
-            </div>
-            <div onClick={() => window.open("https://github.com/denialpan/dankeyboard", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
-                <img src={dankeyboard} alt="dankeyboard" width={720} />
+                        </>
+                    )}
+                />
 
-                <div class="custom-caption custom-divider-bottom">
-                    keyboard and mouse tracking with a custom heatmap graph of keyboard, mouse, and monitor
-                    <ul>
-                        <li>
-                            C#
-                        </li>
-                        <li>
-                            WPF
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                <ProjectCard
+                    title="dansweeper-ml"
+                    githubHref="https://github.com/denialpan/dansweeper-ml"
+                    image={(
+                        <video autoplay loop muted playsinline preload="metadata" poster="/thumb.jpg">
+                            <source src={minedemo} type="video/mp4" />
+                        </video>
+                    )}
+                    description={(
+                        <>
+                            minesweeper from scratch with multiple planned solving and generation algorithms
 
-            <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/dansweeper-ml", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
-                dansweeper-ml
-            </div>
-            <video
-                autoplay
-                loop
-                muted
-                playsinline
-                width="720"
-                preload="metadata"
-                poster="/thumb.jpg"
-                class='latest-video'
-            >
-                <source src={minedemo} type="video/webm" />
-            </video>
+                        </>
+                    )}
+                />
 
-            <div class="custom-caption custom-divider-bottom">
-                minesweeper from scratch with multiple planned solving and generation algorithms
-                <ul>
-                    <li>
-                        C++
-                    </li>
-                    <li>
-                        Raylib - extremely lightweight graphics engine
-                    </li>
-                </ul>
-            </div>
+                <ProjectCard
+                    title="DoABarrelWall"
+                    githubHref="https://github.com/denialpan/DoABarrelWall"
+                    image={<img src={db1} alt="DoABarrelWall wallpaper tweak preview" />}
+                    description={(
+                        <>
+                            an iOS 13 - 15 tweak adding wallpaper functionality that took Apple up until iOS 16 to implement. Thank you Alexandra for having a device still on iOS 13.
 
-            <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/DoABarrelWall", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
-                DoABarrelWall
-            </div>
+                        </>
+                    )}
+                />
 
-            <div style={{
-                display: "flex", gap: "10px", overflowX: "auto"
-            }}>
-                <img src={db1} height={400} alt="iphone1" />
-                <img src={db2} height={400} alt="iphone2" />
-                <video
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    height={400}
-                    preload="metadata"
-                    poster="/thumb.jpg"
-                >
-                    <source src="https://packaged-media.redd.it/gzyw9y8z4mh61/pb/m2-res_480p.mp4?m=DASHPlaylist.mpd&v=1&e=1756623600&s=da825623bc15ce0726d1ddf36eb4392389a046ec" type="video/webm" />
-                </video>
-            </div>
+                <ProjectCard
+                    title="s4-shadowplay"
+                    githubHref="https://github.com/denialpan/s4-shadowplay"
+                    image={<img src={s4shadowplay} alt="s4-shadowplay file storage interface" />}
+                    description={(
+                        <>
+                            a personal Google Drive alternative file storage supporting multiple users
 
+                        </>
+                    )}
+                />
 
-            <div class="custom-caption custom-divider-bottom">
-                an iOS 13 - 15 tweak adding wallpaper functionality that took Apple up until iOS 16 to implement
-                <ul>
-                    <li>
-                        Objective-C
-                    </li>
-                    <li>
-                        Theos
-                    </li>
-                    <li>
-                        Thank you Alexandra for having a device still on iOS 13
-                    </li>
-                </ul>
-            </div>
+                <ProjectCard
+                    title="danverter"
+                    githubHref="https://github.com/denialpan/danverter"
+                    image={<img src={danverter} alt="danverter ffmpeg conversion tool" />}
+                    description={(
+                        <>
+                            small GUI paired with ffmpeg with the intent to convert "shadowplays" to 8mb clips
 
-            <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/s4-shadowplay", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
-                s4-shadowplay
-            </div>
-
-            <img src={s4shadowplay} alt="s4-shadowplay" width={800} />
-
-            <div class="custom-caption custom-divider-bottom">
-                a personal Google Drive alternative file storage supporting multiple users
-                <ul>
-                    <li>
-                        React/Next.JS
-                    </li>
-                    <li>
-                        SQLite3
-                    </li>
-                    <li>
-                        AWS S3
-                    </li>
-                    <li>
-                        Tailwind CSS
-                    </li>
-                </ul>
-            </div>
-
-            <div class="custom-header" onClick={() => window.open("https://github.com/denialpan/danverter", "_blank", "noopener,noreferrer")} style={{ cursor: "pointer" }}>
-                danverter
-            </div>
-
-            <div style={{
-                display: "flex", gap: "10px", overflowX: "auto"
-            }}>
-                <img src={danverter} width={420} alt="danverter1" />
-                <img src={danverter1} width={420} alt="danverter2" />
-
-            </div>
-
-
-            <div class="custom-caption custom-divider-bottom">
-                small GUI paired with ffmpeg with the intent to convert "shadowplays" to 8mb clips
-                <ul>
-                    <li>
-                        C#
-                    </li>
-                    <li>
-                        WinForms
-                    </li>
-                </ul>
-            </div>
-
-            <div class="custom-header">
-                Archive
-            </div>
-
-            <div class="custom-caption custom-divider-bottom">
-                Very small projects or things that I no longer maintain, but still learned a lot from and still want to show:
-
-                <ul>
-                    <li>
-                        <a href="https://github.com/denialpan/danverter-music-bot" target="_blank" rel="noreferrer"> small python music bot for my friends </a>
-
-                    </li>
-                    <li>
-                        <a href="https://denialpan.github.io/portfolio-old-1/" target="_blank" rel="noreferrer"> first old portfolio from maybe 2021 - 2022</a>
-                    </li>
-                </ul>
-
+                        </>
+                    )}
+                />
             </div>
 
         </div>
