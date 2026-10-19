@@ -8,22 +8,21 @@ status: "current"
 ### programs
 
 - <a href="https://www.firefox.com/en-US/" target="_blank" rel="noopener noreferrer">Firefox</a> (and extensions)
-  - <a href="https://addons.mozilla.org/en-US/firefox/addon/600-sound-volume/" target="_blank" rel="noopener noreferrer">600% Sound Volume </a>
   - <a href="https://addons.mozilla.org/en-US/firefox/addon/clearurls/" target="_blank" rel="noopener noreferrer">ClearURLs</a>
   - <a href="https://addons.mozilla.org/en-US/firefox/addon/istilldontcareaboutcookies/" target="_blank" rel="noopener noreferrer">I still don't care about cookies</a>
   - <a href="https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes/" target="_blank" rel="noopener noreferrer">Return Youtube Dislike</a>
   - <a href="https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/" target="_blank" rel="noopener noreferrer">SponsorBlock</a>
   - <a href="https://addons.mozilla.org/en-US/firefox/addon/styl-us/" target="_blank" rel="noopener noreferrer">Stylus</a> to inject custom <a href="https://pastebin.com/DwfbciBP" target="_blank" rel="noopener noreferrer">CSS</a> (since OpenAI has the worst page styling decisions)
   - <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/" target="_blank" rel="noopener noreferrer">uBlock Origin</a>
-- <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>
-- <a href="https://www.vegascreativesoftware.com/us/vegas-pro/" target="_blank" rel="noopener noreferrer">Vegas 18</a>
 - <a href="https://obsproject.com/download" target="_blank" rel="noopener noreferrer">OBS</a>
 - <a href="https://www.jetbrains.com/clion/download/" target="_blank" rel="noopener noreferrer">CLion</a>
 - <a href="https://www.7-zip.org/download.html" target="_blank" rel="noopener noreferrer">7zip</a>
 - <a href="https://rustdesk.com/" target="_blank" rel="noopener noreferrer">RustDesk</a>
 - <a href="https://www.audacityteam.org/download/" target="_blank" rel="noopener noreferrer">Audacity</a>
-- <a href="https://www.notepadsapp.com/" target="_blank" rel="noopener noreferrer">Notepads</a>
 - <a href="https://www.getpaint.net/download.html" target="_blank" rel="noopener noreferrer">Paint.NET</a>
+  - <a href="https://forums.paint.net/topic/112095-align-object/" target="_blank" rel="noopener noreferrer">Align Object</a>
+- <a href="https://www.videolan.org/vlc/download-windows.html" target="_blank" rel="noopener noreferrer">VLC</a>
+- <a href="https://notepad-plus-plus.org/downloads/" target="_blank" rel="noopener noreferrer">Notepad++</a>
 
 ### library/developer software
 
@@ -34,7 +33,6 @@ status: "current"
 - <a href="https://www.jetbrains.com/toolbox-app/" target="_blank" rel="noopener noreferrer">JetBrains Toolbox</a>
 - <a href="https://www.ffmpeg.org/download.html" target="_blank" rel="noopener noreferrer">FFmpeg</a>
 - <a href="https://github.com/Xanashi/Icaros/releases" target="_blank" rel="noopener noreferrer">Icaros</a>
-- <a href="https://visualstudio.microsoft.com/downloads/?q=build+tools#build-tools-for-visual-studio-2022" target="_blank" rel="noopener noreferrer">Visual Studio MSVC</a>
 - <a href="https://sqlitestudio.pl/" target="_blank" rel="noopener noreferrer">SQLiteStudio</a>
 
 ### portable sporadic utilities
@@ -56,12 +54,13 @@ status: "current"
 - <a href="https://github.com/j-p-higgins/SoundThread/releases" target="_blank" rel="noopener noreferrer">SoundThread</a>
 - <a href="https://prismlauncher.org/" target="_blank" rel="noopener noreferrer">Prism Launcher</a>
 
-### Windows 11 Specific
-
-- <a href="https://github.com/valinet/ExplorerPatcher/releases" target="_blank" rel="noopener noreferrer">Explorer Patcher</a>
-
 ---
 
-#### no longer needed
+#### no longer needed (since 10/19/2026)
 
-- ~~
+- <a href="https://github.com/valinet/ExplorerPatcher/releases" target="_blank" rel="noopener noreferrer">Explorer Patcher</a>
+- <a href="https://visualstudio.microsoft.com/downloads/?q=build+tools#build-tools-for-visual-studio-2022" target="_blank" rel="noopener noreferrer">Visual Studio MSVC</a>
+- <a href="https://www.notepadsapp.com/" target="_blank" rel="noopener noreferrer">Notepads</a>
+- <a href="https://addons.mozilla.org/en-US/firefox/addon/600-sound-volume/" target="_blank" rel="noopener noreferrer">600% Sound Volume </a>
+- <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>
+- <a href="https://www.vegascreativesoftware.com/us/vegas-pro/" target="_blank" rel="noopener noreferrer">Vegas 18</a>
